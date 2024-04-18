@@ -108,7 +108,7 @@ header {
   }
 
   input{
-    width: 500px;
+    width: 530px;
     height: 50px;
     border-radius: 10px;
     border: solid var(--typography) 2px;
@@ -123,7 +123,7 @@ header {
    }
     
    .enviar{
-    width: 500px;
+    width: 530px;
     height: 50px;
     background-color: var(--typography);
     color: var(--background);

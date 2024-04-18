@@ -12,6 +12,9 @@
     font-size: 62.5%; /* 1rem = 10px */
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
   
   body {
     width: 100%;
@@ -94,3 +97,4 @@ header {
     opacity: 1;
   }
   
+ 

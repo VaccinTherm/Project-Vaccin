@@ -12,10 +12,10 @@
     font-size: 62.5%; /* 1rem = 10px */
   }
   
-  html {
+  /* html {
     scroll-behavior: smooth;
   }
-  
+   */
   body {
     width: 100%;
   }
@@ -32,6 +32,7 @@
   
     line-height: 2rem;
     letter-spacing: 0.36px;
+    background-color: #7FA9C7;;
   }
   
   /* HEADER */
@@ -80,7 +81,7 @@ header {
     color: var(--main-color);
   }
   
-  .btn-primary, .btn-primary:active, .btn-primary:visited {
+  /* .btn-primary, .btn-primary:active, .btn-primary:visited {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,10 +92,9 @@ header {
     height: 5.7rem;
     border-radius: 100px;
     transition: all .3s;
-  }
+  } */
   
   .btn-primary:hover {
     opacity: 1;
   }
-  
- 
+

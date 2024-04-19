@@ -30,14 +30,14 @@
           <h2>Calculadora Fincanceira</h2>
           <br>
           <p class="titulo_vc_sabia">
-            Você sabia ?
+            Você sabia?
           </p>
           <br><br>
           <p class="descricao">
             De acordo com a Organização Mundial de Saúde (OMS), cerca de 50% das
             vacinas produzidas, em todo o mundo, chegam ao seu destino em
             condições precárias e inadequadas para uso.
-            <br><br>
+            <br>
             Aproximadamente 40% desses problemas decorrem principalmente por
             variações de temperatura durante o transporte de acordo com a
             Resolução da Anvisa (RDC Nº 430 - Artigo 4º), diz que todas as partes
@@ -156,7 +156,46 @@
           </li>
         </ul>
       </footer>
+      <div class="modal-container" id="div_modal">
+        <div class="modal">
+          <h2>Simulando perdas</h2>
+          <br />
+          <span id="span_resposta"></span>
+          <br />
+          <div class="btns">
+            <button class="btnVoltar" onclick="closeModal()">Voltar</button>
+            <button class="btnFechar" onclick="closeModal()">Fechar</button>
+          </div>
+        </div>
+      </div>
     </div>
 </body>
 
 </html>
+
+<script>
+  const modal = div_modal
+
+function calcular() {
+  let valorVacinas = Number(input_valorVacinasReais.value)
+  let qtdVacinasLote = Number(input_qtdVacinasLote.value)
+  let qtdLote = Number(input_qtdLote.value)
+  let qtdEntregasMes = Number(input_qtdEntregasMes.value)
+
+  let totalVacinas = qtdVacinasLote * qtdLote * qtdEntregasMes
+  let valorGasto = totalVacinas * valorVacinas
+
+  span_resposta.innerHTML = 
+  `Olá! Ficamos felizes por você estar aqui. Confira os valores abaixo:<br><br>
+  Total das vacinas: <b>${totalVacinas} Vacinas</b><br><br>
+  Valor gasto: <b>R$${valorGasto} Reais</b><br><br>
+  Possível perda: <span style="color: red;"><b>${totalVacinas * 0.40} vacinas</b></span>, que equivale a 40% das vacinas.<br><br>
+  Valor dessa perda: <span style="color: red;"><b>R$${valorGasto * 0.40} Reais</b><br><br></span> 
+  Com a solução da VaccinTherm, você poderá monitorar os dados de<br>temperatura e umidade dos seus transportes.`
+modal.classList.add('active')
+}
+
+function closeModal() {
+modal.classList.remove('active')
+}
+</script>

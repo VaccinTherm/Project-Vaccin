@@ -1,189 +1,208 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:wght@300;500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:wght@300;500;800&display=swap");
 
+/*=== GERAL ===========================*/
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #7fa9c7;
+  --typography: #3c5b5f;
+  --background: #ecebe7;
+
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+*::selection {
+  background-color: var(--typography);
+  color: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #537b97;
+  font-family: "Manrope";
+  font-size: 2rem;
+
+  overflow: overlay;
+
+  color: var(--background);
+  background-color: var(--background);
+
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2rem;
+  letter-spacing: 0.36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
 }
 
-.container {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: var(--background);
+  font-weight: 300;
+  cursor: pointer;
 }
 
-.form-image {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 1rem;
-}
-
-.form-image img {
-    width: 31rem;
+img {
+  user-select: none;
 }
 
 .form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    width: 86rem;
+    padding-left: 6.4rem;
+    color: var(--background);
+    background-color: var(--typography);
+    border: 2px solid var(--typography)
+}
+
+.form .form-image {
+    height: 90vh;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 3rem;
+    background-color: var(--background);
+    border-radius: 0 10px 10px 0;
+}
+
+.form .form-image img {
+  width: 32rem;
 }
 
 .form-header {
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.cadastro-button {
-    display: flex;
-    align-items: center;
-}
-
-.cadastro-button button {
-    border: none;
-    background-color: #7FA9C7;
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.cadastro-button button:hover {
-    background-color: #7FA9C7;
-}
-
-.cadastro-button button a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #fff
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form-header h1::after {
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 0.3rem;
-    background-color: #7FA9C7;
-    margin: 0 auto;
-    position: absolute;
-    border-radius: 10px;
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: var(--main-color);
+  margin-top: 2rem;
+  border-radius: 10px;
 }
 
 .input-group {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 }
 
-.input-box {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.1rem;
+.input-group .input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-.input-box input {
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
-    font-size: 0.8rem;
+.input-group .input-box label {
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--background);
 }
 
-.input-box input:hover {
-    background-color: #eeeeee75;
+.input-group .input-box input {
+  height: 4.8rem;
+  width: 32rem;
+  font-family: "Manrope";
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--background);
+  background-color: transparent;
+  outline: 1px solid rgba(236, 235, 231, 0.5);
+  border: none;
+  border-radius: 10px;
+  padding-left: 1.6rem;
 }
 
-.input-box input:focus-visible {
-    outline: 1px solid #7FA9C7;
+.input-group .input-box input:focus {
+  outline: 1px solid var(--background);
 }
 
-.input-box label,
-.curso-title h6 {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #000000c0;
+.input-group .input-box input::placeholder {
+  font-family: "Manrope";
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--background);
+  opacity: 0.7;
 }
 
-.input-box input::placeholder {
-    color: #00000be0
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  color: var(--typography);
+  opacity: 0.7;
+  font-weight: 400;
+  width: 100%;
+  height: 4.8rem;
+  border-radius: 10px;
+  transition: all 0.3s;
 }
 
-.login-button button {
-    width: 100%;
-    margin-top: 0.5rem;
-    border: none;
-    background-color: #7FA9C7;
-    padding: 0.62rem;
-    border-radius: 5px;
-    cursor: pointer;
+.btn-primary:hover {
+  opacity: 1;
 }
 
-.login-button button:hover{
-    background-color: #7FA9C7;
+.form .external-link,
+.form .external-link:visited,
+.form .external-link:active {
+    font-weight: 300;
+    opacity: .7;
+    transition: .3s;
 }
 
-.login-button button a {
-    text-decoration: none;
-    font-size: 0.93rem;
-    font-weight: 500;
-    color: #fff
-}
-
-.forgot-password a {
-    text-decoration: none;
-    color:#7FA9C7;
-    font-size: 0.8rem;
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.form .external-link:hover {
+    opacity: 1;
 }
 
 .errorInput {
-    border: 2px solid rgb(202, 44, 44) !important;
+  border: 2px solid rgb(202, 44, 44) !important;
 }
 
 @media screen and (max-width: 1330px) {
-    .form-image {
-        display: none;
-    }
-    .container {
-        width: 50%;
-    }
-    .form {
-        width: 100%;
-    }
+  .form-image {
+    display: none;
+  }
+  .container {
+    width: 50%;
+  }
+  .form {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1064px) {
-    .container {
-        width: 90%;
-        height: auto;
-    }
-    .input-group {
-        flex-direction: column;
-        overflow-y: scroll;
-        flex-wrap: nowrap;
-        max-height: 10rem;
-        padding-right: 5rem;
-    }
+  .container {
+    width: 90%;
+    height: auto;
+  }
+  .input-group {
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+    max-height: 10rem;
+    padding-right: 5rem;
+  }
 }

@@ -118,13 +118,43 @@ overflow-x: hidden;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+ 
 }
 
-.number{
+@keyframes blink {
+  from {
+    opacity: 1; /* Inicialmente visível */
+  }
+  to {
+    opacity: 0.5; /* Torna-se invisível */
+  }
+}
+
+.number1{
   font-size: 35px;
   font-weight: 500;
-  color: rgb(255, 0, 0);
+  color: rgb(0, 103, 162);
 }
+
+.number2{
+  font-size: 35px;
+  font-weight: 500;
+  color: rgb(232, 252, 4);
+}
+
+.number3{
+  font-size: 35px;
+  font-weight: 500;
+  color: rgb(16, 255, 4);
+}
+
+.number4{
+  font-size: 35px;
+  font-weight: 500;
+  color: rgb(250, 0, 0);
+}
+
+
 .card-name{
   color: #551818;
   font-weight: 600;

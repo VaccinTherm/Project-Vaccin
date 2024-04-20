@@ -11,8 +11,8 @@
   
     font-size: 62.5%; /* 1rem = 10px */
   }
-  
-  /* html {
+/*   
+  html {
     scroll-behavior: smooth;
   }
    */
@@ -94,7 +94,25 @@ header {
     transition: all .3s;
   } */
   
-  .btn-primary:hover {
+  /* .btn-primary:hover {
     opacity: 1;
-  }
+  } */
 
+  .rectangle {
+    width: 300px; /* Ajuste o tamanho do retângulo conforme necessário */
+    height: 200px; /* Ajuste o tamanho do retângulo conforme necessário */
+    background-color: #3498db; /* Cor de fundo do retângulo */
+    margin-bottom: 20px;
+}
+
+.square {
+    width: 140px; /* Ajuste o tamanho do quadrado conforme necessário */
+    height: 140px; /* Ajuste o tamanho do quadrado conforme necessário */
+    background-color: #2ecc71; /* Cor de fundo do quadrado */
+    margin: 0 10px; /* Espaçamento entre os quadrados */
+}
+
+
+  
+  
+ 

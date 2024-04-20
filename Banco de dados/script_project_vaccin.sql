@@ -1,4 +1,5 @@
 CREATE DATABASE vaccinTherm;
+
 USE vaccinTherm;
 
 
@@ -75,3 +76,22 @@ CONSTRAINT pkRegistro PRIMARY KEY (idRegistro,fkSensor)
 );
 
 -- INSERIR VALORES DOS REGISTROS
+
+
+INSERT INTO Vacina (nome, tipo, temperatura_maxima_suportada, temperatura_minima_suportada, umidade_maxima_suportada, umidade_minima_suportada) 
+VALUES 
+('Vacina COVID-19', 'Injeção', 8.00, 2.00, 80, 50),
+('Vacina Gripe', 'Injeção', 10.00, 5.00, 85, 60),
+('Vacina TetraViral', 'Injeção', 5.00, -5.00, 90, 40);
+
+
+INSERT INTO Veiculo (idVeiculo, data_entrega, placa, modeloVeiculo, motorista, fkEmpresa, fkSensor) 
+VALUES 
+(1, '2024-04-20', 'ABC1234', 'Ford Transit', 'Pedro Souza', 1, 1),
+(2, '2024-04-21', 'DEF5678', 'Fiat Fiorino', 'Ana Oliveira', 2, 2),
+(3, '2024-04-22', 'GHI9012', 'Volkswagen Kombi', 'Marcos Santos', 3, 1);
+
+INSERT INTO Registro (idRegistro, data_hora, dht11_temperatura, dht11_umidade, fkSensor, fkVacina_registro) 
+VALUES 
+(1, '2024-04-20 08:00:00', 6.50, 75, 1, 1),
+(2, '2024-04-21 09:30:00', 7.20, 70, 2, 2);

@@ -64,7 +64,7 @@ CONSTRAINT pkComposta PRIMARY KEY (idVeiculo,data_entrega)
 -- INSERIR VALORES DOS VEICULOS
 
 CREATE TABLE Registro(
-idRegistro INT NOT NULL,
+idRegistro INT auto_increment,
 data_hora DATETIME NOT NULL,
 dht11_temperatura DECIMAL (4,2) NOT NULL,
 dht11_umidade INT NOT NULL,
@@ -95,3 +95,4 @@ INSERT INTO Registro (idRegistro, data_hora, dht11_temperatura, dht11_umidade, f
 VALUES 
 (1, '2024-04-20 08:00:00', 6.50, 75, 1, 1),
 (2, '2024-04-21 09:30:00', 7.20, 70, 2, 2);
+

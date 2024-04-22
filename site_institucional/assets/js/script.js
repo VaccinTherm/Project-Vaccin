@@ -44,3 +44,4 @@ ScrollReveal().reveal('#about', {
   reset: true,
   origin: 'left'
 });
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <title>VaccinTherm</title>
+</head>
+<body id="institucional">
+  <header id="header">
+    <div class="content">
+      <img src="./assets/images/logo.svg" alt="Logotipo da empresa VaccinTherm" id="logo" draggable="false" onclick="scrollToSection(0)">
+        <nav>
+          <ul class="navbar">
+            <li><a onclick="scrollToSection(0)">Home</a></li>
+            <li><a onclick="scrollToSection(535)">Soluções</a></li>
+            <li><a onclick="scrollToSection(775)">Sobre nós</a></li>
+            <li><a href="./pages/calculadoraFinanceira.html">Calculadora</a></li>
+            <li><a onclick="scrollToSection()">Contato</a></li>
+          </ul>
+        </nav>
+
+        <a onclick="scrollToSection()" class="btn-primary">Contato</a>
+    </div>
+  </header>
+  
+  <div class="wrapper">
+    <section id="introduction">
+      <div class="container">
+        <h1 class="main-title">
+          VaccinTherm<br />
+          <span>Protegendo vacinas</span><br />
+          e vidas com precisão.
+        </h1>
+
+        <p class="text">Proteja suas vacinas e evite perdas desnecessárias com a solução tecnológica feita sob medida para você! Na VaccinTherm, estamos aqui para oferecer eficiência e praticidade em seu dia a dia. Conte conosco para garantir a integridade das suas vacinas em cada etapa do transporte e armazenamento. Protegendo vacinas e protegendo vidas.</p>
+      
+        <a class="btn-primary intro" onclick="scrollToSection(535)">Ver serviços</a>
+      </div>
+
+      <img src="./assets/images/intro-vector.svg" alt="Vetor de médicos manuseando vacinas">
+    </section>
+
+    <section id="objective">
+      <h2 class="section-title">Objetivos</h2>
+      <div class="container">
+        <ul class="service-list">
+          <li>
+            <div class="num">01</div>
+            <div class="content">
+              <h3>Serviço 1</h3>
+              <p>Monitorar a temperatura e umidade do transporte de vacinas.</p>
+            </div>
+          </li>
+          
+          <img src="./assets/images/divisor-objetive.svg" alt="Divisor">
+          
+          <li>
+            <div class="num">02</div>
+            <div class="content">
+              <h3>Serviço 2</h3>
+              <p>Coletar dados sobre a umidade e a temperatura do transporte.</p>
+            </div>
+          </li>
+          
+          <img src="./assets/images/divisor-objetive.svg" alt="Divisor">
+          
+          <li>
+            <div class="num">03</div>
+            <div class="content">
+              <h3>Serviço 3</h3>
+              <p>Informar dados sobre a umidade e a temperatura para o usuário do sistema.</p>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+    
+    <section id="about">
+      <div class="content">
+        <h2 class="section-title">Sobre nós</h2>
+        <p class="text">Somos uma startup visionária formada por uma equipe dedicada. Nosso objetivo é revolucionar a distribuição de vacinas por meio de soluções inovadoras de monitoramento de temperatura e umidade. Acreditamos que podemos mudar o curso da história, garantindo que as vacinas cheguem aos seus destinos finais com qualidade e eficácia preservadas. Nossa missão é promover a segurança e eficiência na entrega de vacinas, salvando vidas e protegendo comunidades em todo o mundo. Nosso modelo de negócio é baseado em valores fundamentais de excelência, integridade e colaboração. Vemos cada desafio como uma oportunidade de crescimento e cada cliente como um parceiro na nossa missão de promover a saúde global. Junte-se a nós nesta jornada enquanto trabalhamos para criar um futuro mais saudável e seguro para todos.</p>
+      </div>
+      <img src="./assets/images/about-vector.svg" alt="Vetor de um médico aplicando vacina no paciente">
+    </section>
+  </div>
+</body>
+</html>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="./assets/js/script.js"></script>

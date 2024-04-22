@@ -1,0 +1,238 @@
+/*=== GERAL ===========================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #7FA9C7;
+  --typography: #3C5B5F;
+  --background: #ECEBE7;
+  
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+*::selection {
+  background-color: var(--typography);
+  color: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  padding-top: 11.4rem;
+}
+
+body {
+  font-family: 'Manrope';
+  font-size: 2rem;
+
+  overflow: overlay;
+
+  background-color: var(--background);
+  color: var(--typography);
+
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2rem;
+  letter-spacing: 0.36px;
+}
+
+.wrapper {
+  margin-inline: auto;
+  padding-inline: 5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a, a:active, a:visited {
+  text-decoration: none;
+  color: var(--typography);
+  font-weight: 300;
+  cursor: pointer;
+}
+
+img {
+  user-select: none;
+}
+
+/*=== HEADER ===========================*/
+header {
+  position: fixed;
+  top: 0;
+  padding: 3.2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+  width: 100%;
+  transition: all .3s ease-out;
+  z-index: 99;
+}
+
+header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+header #logo {
+  cursor: pointer;
+}
+
+header nav .navbar {
+  display: flex;
+  gap: 3.2rem;
+}
+
+header nav .navbar a {
+  opacity: .5;
+  transition: all 0.3s;
+}
+
+header nav .navbar a:hover {
+  opacity: 1;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--background);
+  opacity: 0.7;
+  width: 14rem;
+  height: 4.8rem;
+  border-radius: 100px;
+  transition: all .3s;
+}
+
+.btn-primary:hover {
+  opacity: 1;
+}
+
+/*=== HEADER SCROLL ===========================*/
+
+header.scroll {
+  background-color: var(--typography);
+  position: fixed;
+  padding: 1.6rem 0;
+}
+
+header.scroll a {
+  color: var(--background);
+}
+
+/*=== INTRODUCTION ===========================*/
+
+section#introduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section#introduction .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.main-title {
+  font-size: 7rem;
+  line-height: 8rem;
+  font-weight: 300;
+  color: var(--typography);
+}
+
+section#introduction .container .main-title span {
+  color: var(--main-color);
+}
+
+section#introduction .container .text {
+  color: var(--typography);
+  opacity: .7;
+  line-height: 2.7rem;
+}
+
+section#introduction .container .btn-primary.intro {
+  width: 18rem;
+}
+
+
+/*=== OBJETIVE ===========================*/
+.section-title {
+  font-size: 4rem;
+  line-height: 4rem;
+  margin: 3.2rem 0;
+  text-align: center;
+  color: var(--main-color);
+  font-weight: 300;
+}
+
+section#objective .service-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+section#objective .service-list li {
+  width: 37rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+section#objective .service-list li .num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--typography);
+  color: var(--typography);
+  border-radius: 50px;
+  height: 100%;
+  padding: .8rem 1.4rem;
+}
+
+section#objective .service-list li .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+section#objective .service-list li .content h3 {
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 3.2rem;
+  color: var(--typography);
+}
+
+section#objective .service-list li .content p {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: var(--typography);
+  opacity: .7;
+}
+
+
+/*=== ABOUT US ===========================*/
+section#about {
+  display: flex;
+  justify-content: space-between;
+}
+
+section#about .section-title {
+  text-align: start;
+}
+
+section#about .content .text {
+  line-height: 2.7rem;
+  color: var(--typography);
+  opacity: .7;
+  width: 64rem;
+}

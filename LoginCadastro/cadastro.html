@@ -5,72 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-cadastro.css">
+    <link rel="stylesheet" href="style-login.css">
 
     <title>Cadastro</title>
 </head>
 
-<body>
+<body id="cadastro">
     <div class="container">
-
         <div class="form">
-            <form id="formulario">
-                <div class="form-header">
-                    <div class="title">
-                        <h1>Cadastre-se</h1>
-                    </div>
-                    
-                </div>
-
+            <div class="title">
+                <h1>Cadastre-se</h1>
+            </div>
+            
+            <div class="form-box">
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="company">Empresa</label><br>
+                        <label for="company">Empresa</label>
                         <input id="company" type="text" name="company" placeholder="Nome da empresa">
                     </div>
 
                     <div class="input-box">
-                        <label for="representative">Representante</label><br>
+                        <label for="representative">Representante</label>
                         <input id="representative" type="text" name="representative"
                             placeholder="Representante da empresa">
                     </div>
 
                     <div class="input-box">
-                        <label for="email">E-mail</label><br>
+                        <label for="email">E-mail</label>
                         <input id="email" type="email" name="email" placeholder="Digite o seu email">
                     </div>
 
+                </div>
+
+                <div class="input-group">
                     <div class="input-box">
-                        <label for="number">Celular</label><br>
+                        <label for="number">Celular</label>
                         <input id="number" type="tel" name="number" placeholder="(xx) xxxxx-xxxx">
                     </div>
 
                     <div class="input-box">
-                        <label for="password">Senha</label><br>
+                        <label for="password">Senha</label>
                         <input id="password" type="password" name="password" placeholder="Digite a sua senha">
                     </div>
 
                     <div class="input-box">
-                        <label for="Confirmpassword">CNJP</label><br>
+                        <label for="Confirmpassword">CNJP</label>
                         <input id="Confirmpassword" type="password" name="CNPJ"
                             placeholder="Digite seu CNPJ">
                     </div>
                 </div>
-
-                <div class="finish-button">
-                    <a class="finish-button">Finalizar</a>
-                </div>
-
-                <div class="login-button">
-                    <a href="./login.html" class="external-link">Entrar</a>
-                </div>
-
-            </form>
-
-            <div class="form-image">
-                <img src="./login-vector.svg">
             </div>
 
+            <div class="buttons">
+                <a class="btn-primary">Criar conta</a>
+    
+                <a href="./login.html" class="external-link">Já tenho uma conta</a>
+            </div>
         </div>
+        <!-- https://storyset.com/illustration/vaccine/bro#90CAF9FF&hide=Vaccine&hide=simple -->
 </body>
-
-// https://storyset.com/illustration/vaccine/bro#90CAF9FF&hide=Vaccine&hide=simple
+</html>

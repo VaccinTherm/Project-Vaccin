@@ -16,8 +16,8 @@
 }
 
 *::selection {
-  background-color: var(--typography);
-  color: var(--background);
+  color: var(--typography);
+  background-color: var(--background);
 }
 
 html {
@@ -59,21 +59,38 @@ img {
   user-select: none;
 }
 
+.container {
+  background-color: var(--typography);
+  border: 2px solid var(--typography);
+  border-radius: 10px;
+}
+
+#cadastro .container {
+  padding: 3.2rem 0;
+}
+
 .form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    width: 86rem;
-    padding-left: 6.4rem;
-    color: var(--background);
-    background-color: var(--typography);
-    border: 2px solid var(--typography)
+  padding: 0 6.4rem;
+}
+
+#login .form {
+  padding: 0 0 0 6.4rem;
+  color: var(--background);
+}
+
+#login .form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.form .form-box {
+  display: flex;
+  gap: 3.2rem;
+  margin: 3.2rem 0;
+  flex-wrap: wrap;
 }
 
 .form .form-image {
-    height: 90vh;
-    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,26 +102,12 @@ img {
   width: 32rem;
 }
 
-.form-header {
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.form-header h1::after {
-  content: "";
-  display: block;
-  width: 5rem;
-  height: 0.3rem;
-  background-color: var(--main-color);
-  margin-top: 2rem;
-  border-radius: 10px;
-}
-
 .input-group {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  flex-wrap: wrap;
+  max-height: 100vh;
 }
 
 .input-group .input-box {
@@ -133,16 +136,14 @@ img {
   padding-left: 1.6rem;
 }
 
-.input-group .input-box input:focus {
-  outline: 1px solid var(--background);
-}
-
 .input-group .input-box input::placeholder {
   font-family: "Manrope";
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.36px;
+  font-weight: 300;
   color: var(--background);
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .btn-primary,
@@ -155,7 +156,7 @@ img {
   color: var(--typography);
   opacity: 0.7;
   font-weight: 400;
-  width: 100%;
+  width: 32rem;
   height: 4.8rem;
   border-radius: 10px;
   transition: all 0.3s;
@@ -177,32 +178,25 @@ img {
     opacity: 1;
 }
 
-.errorInput {
-  border: 2px solid rgb(202, 44, 44) !important;
+.form .input-group .error-input {
+  outline: 1px solid #b85454;
 }
 
-@media screen and (max-width: 1330px) {
-  .form-image {
-    display: none;
-  }
-  .container {
-    width: 50%;
-  }
-  .form {
-    width: 100%;
-  }
+.input-group .input-box input:focus {
+  outline: 1px solid var(--background);
 }
 
-@media screen and (max-width: 1064px) {
-  .container {
-    width: 90%;
-    height: auto;
-  }
-  .input-group {
-    flex-direction: column;
-    overflow-y: scroll;
-    flex-wrap: nowrap;
-    max-height: 10rem;
-    padding-right: 5rem;
-  }
+#cadastro .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.error-message {
+  color: #e63c3c;
+}
+
+.disabled {
+  display: none;
 }

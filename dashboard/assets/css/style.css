@@ -181,3 +181,145 @@ overflow-x: hidden;
   display: flex;
   margin-top: 20rem;
 }
+
+.container-analytics{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+} 
+
+@keyframes piscar {
+  0% { opacity: 1;} /* Opacidade total */
+  50% { opacity: 0.5; } /* Opacidade zero */
+  100% { opacity: 1; } /* Opacidade total */
+}
+
+.btnF1{
+  background-color: rgb(170, 193, 228);
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+  animation: piscar 1s infinite;
+}
+
+.btnF2{
+  background-color: rgb(94, 134, 196);
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnF3{
+  background-color: rgb(16, 71, 153);
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnI{
+  background-color: green;
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnQ3{
+  background-color: rgb(235, 235, 19);
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnQ2{
+  background-color: orange;
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnQ1{
+  background-color: red;
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+  animation: piscar 1s infinite;
+}
+
+.btnUF1{
+  background-color: rgb(170, 193, 228);
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnUF2{
+  background-color: rgb(94, 134, 196);
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnUF3{
+  background-color: rgb(16, 71, 153);
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnUI{
+  background-color: green;
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnUQ3{
+  background-color: yellow;
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnUQ2{
+  background-color: orange;
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+.btnUQ1{
+  background-color: red;
+  padding: 10px 24px;
+  border-color: yellow;
+  cursor: pointer;
+  font-family: 'Dosis', 'sans-serif';
+  font-weight: bold;
+}
+
+

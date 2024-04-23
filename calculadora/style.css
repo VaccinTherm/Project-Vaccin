@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
   }
   
   :root {
@@ -165,54 +166,49 @@ header {
       justify-content: space-between;
    }
 
-   .titulo_vc_sabia{
-    font-size: 75px;
+   .titulo_calculadora{
+    font-size: 40px;
     color: var(--main-color);
   }
 
-  .descricao{
-    font-size: 23px;
-    line-height: 40px;
-    height: 40px;
-    width: 800px;
-  }
-
-  /* SECUNDARIO */
-
-  .secundaria{
-    height: 140px;
-    background-color: var(--background);
-    margin: 0px; 
-  }
-
-  .container_img{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-   }
-  
-  
-  
-  .descricaoSecundaria{
-    font-size: 23px;
-    line-height: 40px;
-    height: 40px;
-    width: 800px;
+  .titulo_voce_sabia{
+    font-size: 75px;
+    color: var(--main-color);
     margin-left: 45px;
+    margin-top: 20px;
   }
-  
-  .imagem_vc_sabia{
-    margin-right: 100px;
-    margin-bottom: 40px;
+
+  .descricao_voce_sabia{
+    font-size: 23px;
+    line-height: 40px;
+    height: 40px;
+    width: 800px;
+    color: var(--typography);
+    margin-left: 45px;
+    margin-top: 50px;
+  }
+
+  .descricao_calculadora{
+    font-size: 23px;
+    line-height: 40px;
+    height: 40px;
+    width: 800px;
+  }
+
+  .container2{
+    width: 600px;
+    height: 630px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .imagem{
     width: 429px;
     height: 429px;
+    margin-left: 100px;
+    margin-top: 80px;
   }
-  
-  .tituloSecundario{
-    font-size: 75px;
-    color: #7AA5BF;
-    margin-left: 40px;
-  }
+
 
   
   /* FOOTER */

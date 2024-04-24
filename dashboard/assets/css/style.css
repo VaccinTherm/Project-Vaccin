@@ -1,22 +1,27 @@
-:root{
-  --bluePrimary: #B5CCE2;
-  --secundary: #D3E9FF;
-  --cinza: #EBECEC;
-  --dark: #000;
-  --ligth-green: #E3FFCB;
-  --ligth: #FFF;
-  --ligth-blue: #D0E4FF;
-  --blue: #9eaeed;
-}
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.topbar{
+
+:root {
+  --main-color: #7FA9C7;
+  --typography: #3C5B5F;
+  --background: #ECEBE7;
+
+  /* font-size: 62.5%; */
+  /* 1rem = 10px */
+}
+
+*::selection {
+  background-color: var(--typography);
+  color: var(--background);
+}
+
+.topbar {
   position: fixed;
-  background-color: rgb(214, 217, 220);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  background-color: var(--background);
+  box-shadow: 0 2px 8px 0 var(--main-color);
   width: 100%;
   height: 60px;
   padding: 0 20px;
@@ -25,15 +30,18 @@
   align-items: center;
   z-index: 1;
 }
-.logo h2{
-color: rgb(48, 101, 101);
+
+.logo h2 {
+  color: rgb(48, 101, 101);
 }
-.search{
+
+.search {
   position: relative;
   width: 60%;
   justify-self: center;
   display: flex;
 }
+
 .search input {
   width: 100%;
   height: 40px;
@@ -44,42 +52,51 @@ color: rgb(48, 101, 101);
   border-radius: 10px;
   background-color: #f5f5f5;
 }
-.search i{
+
+.search i {
   position: relative;
   right: 30px;
   top: 15px;
   cursor: pointer;
 }
-.user{
-  position: relative ;
+
+.user {
+  position: relative;
   width: 50px;
   height: 50px;
 }
-.user img{
+
+.user img {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+  margin-left: 70rem;
   object-fit: cover;
 }
+
 /* .sidebar */
-.sidebar{
-position: fixed;
-top: 60px;
-width: 260px;
-height:  calc(100% - 60px);
-background-color: rgb(31, 106, 129);
-overflow-x: hidden;
+.sidebar {
+  position: fixed;
+  top: 60px;
+  width: 260px;
+  height: calc(100% - 60px);
+  background-color: var(--main-color);
+  overflow-x: hidden;
+  
 }
-.sidebar ul{
+
+.sidebar ul {
   margin-top: 20px;
 }
-.sidebar ul li{
+
+.sidebar ul li {
   width: 100%;
   list-style: none;
 }
-.sidebar ul li a{
+
+.sidebar ul li a {
   width: 100%;
   text-decoration: none;
   color: #fff;
@@ -88,14 +105,17 @@ overflow-x: hidden;
   align-items: center;
 }
 
-.sidebar ul li a i{
+.sidebar ul li a i {
   min-width: 60px;
   font-size: 24px;
   text-align: center;
 }
+.home_sidebar{
+  margin-top: 6rem;
+}
 
 /* main */
-.main{
+.main {
   position: absolute;
   top: 60px;
   width: calc(100% - 260px);
@@ -103,14 +123,16 @@ overflow-x: hidden;
   min-height: calc(100vh - 60px);
   background-color: #f5f5f5;
 }
-.cards{
+
+.cards {
   width: 100%;
   padding: 35px 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
-.cards .card{
+
+.cards .card {
   padding: 20px;
   display: flex;
   align-items: center;
@@ -118,50 +140,56 @@ overflow-x: hidden;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
- 
+
+}
+.titulo_metrica{
+  font-weight: 700;
 }
 
 @keyframes blink {
   from {
-    opacity: 1; /* Inicialmente visível */
+    opacity: 1;
+    /* Inicialmente visível */
   }
+
   to {
-    opacity: 0.5; /* Torna-se invisível */
+    opacity: 0.5;
+    /* Torna-se invisível */
   }
 }
 
-.number1{
+.number1 {
   font-size: 35px;
   font-weight: 500;
   color: rgb(0, 103, 162);
 }
 
-.number2{
+.number2 {
   font-size: 35px;
   font-weight: 500;
   color: rgb(232, 252, 4);
 }
 
-.number3{
+.number3 {
   font-size: 35px;
   font-weight: 500;
   color: rgb(16, 255, 4);
 }
 
-.number4{
+.number4 {
   font-size: 35px;
   font-weight: 500;
   color: rgb(250, 0, 0);
 }
 
 
-.card-name{
+.card-name {
   color: #551818;
   font-weight: 600;
 }
 
 /* chart.js */
-.charts{
+.charts {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
@@ -171,30 +199,44 @@ overflow-x: hidden;
   color: #000000;
   font-weight: 600;
 }
-.chart{
+
+.chart {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
 }
-.sair{
+
+.sair {
   display: flex;
   margin-top: 20rem;
 }
 
-.container-analytics{
+.container-analytics {
   align-items: center;
   justify-content: center;
   display: flex;
-} 
-
-@keyframes piscar {
-  0% { opacity: 1;} /* Opacidade total */
-  50% { opacity: 0.5; } /* Opacidade zero */
-  100% { opacity: 1; } /* Opacidade total */
 }
 
-.btnF1{
+@keyframes piscar {
+  0% {
+    opacity: 1;
+  }
+
+  /* Opacidade total */
+  50% {
+    opacity: 0.5;
+  }
+
+  /* Opacidade zero */
+  100% {
+    opacity: 1;
+  }
+
+  /* Opacidade total */
+}
+
+.btnF1 {
   background-color: rgb(170, 193, 228);
   padding: 10px 24px;
   border-color: yellow;
@@ -204,7 +246,7 @@ overflow-x: hidden;
   animation: piscar 1s infinite;
 }
 
-.btnF2{
+.btnF2 {
   background-color: rgb(94, 134, 196);
   padding: 10px 24px;
   border-color: yellow;
@@ -213,7 +255,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnF3{
+.btnF3 {
   background-color: rgb(16, 71, 153);
   padding: 10px 24px;
   border-color: yellow;
@@ -222,7 +264,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnI{
+.btnI {
   background-color: green;
   padding: 10px 24px;
   border-color: yellow;
@@ -231,7 +273,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnQ3{
+.btnQ3 {
   background-color: rgb(235, 235, 19);
   padding: 10px 24px;
   border-color: yellow;
@@ -240,7 +282,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnQ2{
+.btnQ2 {
   background-color: orange;
   padding: 10px 24px;
   border-color: yellow;
@@ -249,7 +291,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnQ1{
+.btnQ1 {
   background-color: red;
   padding: 10px 24px;
   border-color: yellow;
@@ -259,7 +301,7 @@ overflow-x: hidden;
   animation: piscar 1s infinite;
 }
 
-.btnUF1{
+.btnUF1 {
   background-color: rgb(170, 193, 228);
   padding: 10px 24px;
   border-color: yellow;
@@ -268,7 +310,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnUF2{
+.btnUF2 {
   background-color: rgb(94, 134, 196);
   padding: 10px 24px;
   border-color: yellow;
@@ -277,7 +319,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnUF3{
+.btnUF3 {
   background-color: rgb(16, 71, 153);
   padding: 10px 24px;
   border-color: yellow;
@@ -286,7 +328,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnUI{
+.btnUI {
   background-color: green;
   padding: 10px 24px;
   border-color: yellow;
@@ -295,7 +337,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnUQ3{
+.btnUQ3 {
   background-color: yellow;
   padding: 10px 24px;
   border-color: yellow;
@@ -304,7 +346,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnUQ2{
+.btnUQ2 {
   background-color: orange;
   padding: 10px 24px;
   border-color: yellow;
@@ -313,7 +355,7 @@ overflow-x: hidden;
   font-weight: bold;
 }
 
-.btnUQ1{
+.btnUQ1 {
   background-color: red;
   padding: 10px 24px;
   border-color: yellow;
@@ -321,5 +363,3 @@ overflow-x: hidden;
   font-family: 'Dosis', 'sans-serif';
   font-weight: bold;
 }
-
-

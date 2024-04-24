@@ -19,7 +19,7 @@
           <li><a href="../site_institucional/index.html#objective">Soluções</a></li>
           <li><a href="#">Calculadora</a></li>
           <li><a href="../site_institucional/index.html#about">Sobre nós</a></li>
-         <!--  <li><a href="../dashboard/index.html">Dashboard</a></li> -->
+          <!--  <li><a href="../dashboard/index.html">Dashboard</a></li> -->
         </ul>
       </nav>
       <a href="../Login_cadastro/cadastro.html" class="btn-primary">Login</a>
@@ -28,24 +28,27 @@
       <div class="container">
         <div class="texto">
           <span class="titulo_como_funciona">
-          Como funciona?
+            Como funciona?
           </span>
-            <p class="descricao_calculadora">
-              Entenda o funcionamento da calculadora:<br>
-              O total de vacinas é obtido multiplicando a quantidade por lote pelo número de lotes e pelo número de entregas por mês.
-              O valor total gasto é o total de vacinas multiplicado pelo custo unitário.
-              <br>
-              Há uma perda estimada de 40% devido a problemas de transporte ou armazenamento. 
-              A quantidade de vacinas perdidas é o total de vacinas multiplicado por 0.40. Para calcular o valor dessas perdas, 
-              multiplicamos o valor total gasto por 40%.
-              <br>
-              Esses cálculos ajudam a entender o custo total e as perdas esperadas. 
-              Soluções como a da VaccinTherm, que monitoram temperatura e umidade, 
-              podem ajudar a reduzir essas perdas no transporte e armazenamento das vacinas.
-            </p>
+          <div class="descricao_calculadora">
+            <p class="subtitulo_descricao">Entenda o funcionamento da calculadora:</p><br>
+            <p class="p">O total de vacinas é obtido multiplicando a quantidade por lote pelo número de lotes e pelo
+              número de entregas por mês.
+              O valor total gasto é o total de vacinas multiplicado pelo custo unitário.</p>
+
+            <p class="p">Há uma perda estimada de 40% devido a problemas de transporte ou armazenamento.
+              A quantidade de vacinas perdidas é o total de vacinas multiplicado por 0.40. Para calcular o valor dessas
+              perdas,
+              multiplicamos o valor total gasto por 40%.</p>
+
+            <p class="p">Esses cálculos ajudam a entender o custo total e as perdas esperadas.
+              Soluções como a da VaccinTherm, que monitoram temperatura e umidade,
+              podem ajudar a reduzir essas perdas no transporte e armazenamento das vacinas.</p>
+          </div>
           <br><br>
-    
         </div>
+
+
         <div class="inputs">
           <p class="titulo_input">Valor médio das vacinas</p>
           <br>
@@ -68,36 +71,37 @@
           </button>
           <br><br>
         </div>
+
       </div>
     </div>
     <div class="secundaria"></div>
     <div class="container2">
       <div>
-      <br>
-      <br>
-      <p class="titulo_voce_sabia">
-        Você sabia?
-      </p>
-      <br>
-      <p class="descricao_voce_sabia">
-        De acordo com a Organização Mundial de Saúde (OMS), cerca de 50% das
-        vacinas produzidas, em todo o mundo, chegam ao seu destino em
-        condições precárias e inadequadas para uso.
         <br>
-        Aproximadamente 40% desses problemas decorrem principalmente por
-        variações de temperatura durante o transporte. De acordo com a
-        Resolução da Anvisa (RDC Nº 430 - Artigo 4º), diz que todas as partes
-        envolvidas a produção, armazenagem, distribuição e transporte devem se
-        responsabilizar pela qualidade e segurança dos medicamentos. O
-        descumprimento das disposições constitui infração sanitária, levando à multa!
-      </p>
+        <br>
+        <p class="titulo_voce_sabia">
+          Você sabia?
+        </p>
+        <br>
+        <p class="descricao_voce_sabia">
+          De acordo com a Organização Mundial de Saúde (OMS), cerca de 50% das
+          vacinas produzidas, em todo o mundo, chegam ao seu destino em
+          condições precárias e inadequadas para uso.
+          <br>
+          Aproximadamente 40% desses problemas decorrem principalmente por
+          variações de temperatura durante o transporte. De acordo com a
+          Resolução da Anvisa (RDC Nº 430 - Artigo 4º), diz que todas as partes
+          envolvidas a produção, armazenagem, distribuição e transporte devem se
+          responsabilizar pela qualidade e segurança dos medicamentos. O
+          descumprimento das disposições constitui infração sanitária, levando à multa!
+        </p>
       </div>
       <div class="imagem">
         <img src="Paid idea-bro 1.svg">
       </div>
     </div>
- 
-    
+
+
     <div class="wrapper">
       <footer>
         <img src="logo.svg" alt="Logotipo da empresa VaccinTherm" width="300px">
@@ -168,7 +172,8 @@
           <span id="span_resposta"></span>
           <br />
           <div class="btns">
-            <a href="../site_institucional/index.html#contact"><button class="btnVoltar" onclick="closeModal()">Contate-nos</button></a>
+            <a href="../site_institucional/index.html#contact"><button class="btnVoltar"
+                onclick="closeModal()">Contate-nos</button></a>
             <button class="btnFechar" onclick="closeModal()">X</button>
           </div>
         </div>
@@ -181,26 +186,26 @@
 <script>
   const modal = div_modal
 
-function calcular() {
-  let valorVacinas = Number(input_valorVacinasReais.value)
-  let qtdVacinasLote = Number(input_qtdVacinasLote.value)
-  let qtdLote = Number(input_qtdLote.value)
-  let qtdEntregasMes = Number(input_qtdEntregasMes.value)
+  function calcular() {
+    let valorVacinas = Number(input_valorVacinasReais.value)
+    let qtdVacinasLote = Number(input_qtdVacinasLote.value)
+    let qtdLote = Number(input_qtdLote.value)
+    let qtdEntregasMes = Number(input_qtdEntregasMes.value)
 
-  let totalVacinas = qtdVacinasLote * qtdLote * qtdEntregasMes
-  let valorGasto = totalVacinas * valorVacinas
+    let totalVacinas = qtdVacinasLote * qtdLote * qtdEntregasMes
+    let valorGasto = totalVacinas * valorVacinas
 
-  span_resposta.innerHTML = 
-  `Olá! Ficamos felizes por você estar aqui. Confira os valores abaixo:<br><br>
+    span_resposta.innerHTML =
+      `Olá! Ficamos felizes por você estar aqui. Confira os valores abaixo:<br><br>
   Total das vacinas: <b>${totalVacinas} Vacinas</b><br><br>
   Valor gasto: <b>R$${valorGasto} Reais</b><br><br>
   Possível perda: <span style="color: red;"><b>${totalVacinas * 0.40} vacinas</b></span>, que equivale a 40% das vacinas.<br><br>
   Valor dessa perda: <span style="color: red;"><b>R$${valorGasto * 0.40} Reais</b><br><br></span> 
   Com a solução da VaccinTherm, você poderá monitorar os dados de<br>temperatura e umidade dos seus transportes.`
-modal.classList.add('active')
-}
+    modal.classList.add('active')
+  }
 
-function closeModal() {
-modal.classList.remove('active')
-}
+  function closeModal() {
+    modal.classList.remove('active')
+  }
 </script>

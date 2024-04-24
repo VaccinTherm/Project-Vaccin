@@ -148,7 +148,7 @@ header {
     text-align: justify;
     line-height: 30px;
   }
-  
+
   .inputs{
     width: 600px;
     height: 560px;
@@ -163,6 +163,8 @@ header {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      height: 55vh;
+
    }
 
    .titulo_calculadora{
@@ -171,10 +173,10 @@ header {
   }
 
   .titulo_como_funciona{
-    font-size: 75px;
+    font-size: 50px;
     color: white;
     margin-left: 45px;
-    margin-top: 20px;
+    margin-top: 3rem;
   }
 
   .titulo_voce_sabia{
@@ -197,11 +199,20 @@ header {
 
   .descricao_calculadora{
     font-size: 23px;
-    line-height: 40px;
+    /* line-height: 40px; */
     height: 40px;
     width: 800px;
     margin-left: 45px;
     margin-top: 50px;
+    
+  }
+  .subtitulo_descricao{
+    margin-top: -2rem;
+    color: #7FA9C7;
+    font-weight: 500;
+  }
+  .descricao_calculadora .p{
+    margin-bottom: 2rem;
   }
 
   .container2{

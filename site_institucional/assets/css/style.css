@@ -241,7 +241,7 @@ section#about .content .text {
 
 section#contact {
 
-  background-color: var(--main-color);
+  background-color: #afcee3;
 
   color: var(--typography);
 
@@ -393,7 +393,7 @@ section#contact .form .form-field .message {
 
   height: 17rem;
 
-  background-color: var(--main-color);
+  background-color: #afcee3;
 
   resize: none;
 

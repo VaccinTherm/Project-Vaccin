@@ -14,8 +14,8 @@ const ctxs = document.getElementById('myChartLine');
         label: 'Umidade',
         data: [80, 82, 80, 85, 80, 83],
         borderWidth: 1,
-        backgroundColor: '#36a2eb',
-        borderColor: '#36a2eb'
+        backgroundColor: '#7FA9C7',
+        borderColor: '#7FA9C7'
       }
 
       ]
@@ -35,7 +35,7 @@ const ctxs = document.getElementById('myChartLine');
       {
         label: 'Umidade Média',
         data: [90, 89, 93, 87, 88, 82],
-        backgroundColor: '#36a2eb',
+        backgroundColor: '#7FA9C7',
       }
       ]
     },

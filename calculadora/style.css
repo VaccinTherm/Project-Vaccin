@@ -173,18 +173,15 @@ header {
   }
 
   .titulo_como_funciona{
-    font-size: 50px;
-<<<<<<< HEAD
+    font-size: 60px;
     color: white;
-=======
     color: #7FA9C7;
->>>>>>> 38d1944e71cf6ccaad735c9eb693e741eeff0abc
     margin-left: 45px;
     margin-top: 3rem;
   }
 
   .titulo_voce_sabia{
-    font-size: 75px;
+    font-size: 60px;
     color: var(--main-color);
     margin-left: 45px;
     margin-top: 20px;

@@ -231,7 +231,7 @@ section#about .section-title {
 }
 
 section#about .content .text {
-  line-height: 2.7rem;
+  line-height: 2.9rem;
   color: var(--typography);
   opacity: .7;
   width: 64rem;

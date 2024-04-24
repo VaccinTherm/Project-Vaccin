@@ -173,7 +173,11 @@ header {
   }
 
   .titulo_como_funciona{
+<<<<<<< HEAD
+    font-size: 50px;
+=======
     font-size: 60px;
+>>>>>>> 5a41b31df05d64b855a330f7cc82261985a181d9
     color: white;
     color: #7FA9C7;
     margin-left: 45px;

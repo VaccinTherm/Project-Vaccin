@@ -9,7 +9,7 @@
   --typography: #3C5B5F;
   --background: #ECEBE7;
 
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
   /* 1rem = 10px */
 }
 
@@ -18,19 +18,14 @@
   color: var(--background);
 }
 
-.topbar {
-  position: fixed;
-  background-color: var(--background);
-  box-shadow: 0 2px 8px 0 var(--main-color);
-  width: 100%;
-  height: 60px;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: 2fr 10fr 0.4fr 1fr;
-  align-items: center;
-  z-index: 1;
+body {
+  font-size: 2rem;
+  font-family: Manrope;
 }
 
+.logo{
+  padding: 3rem 1.2rem 0 0.5rem;
+}
 .logo h2 {
   color: rgb(48, 101, 101);
 }
@@ -79,12 +74,44 @@
 /* .sidebar */
 .sidebar {
   position: fixed;
-  top: 60px;
   width: 260px;
   height: calc(100% - 60px);
-  background-color: var(--main-color);
+  background-color: var(--background);
   overflow-x: hidden;
+  border-right: 0.8px solid var(--main-color);
   
+  
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.2rem;
+}
+
+.menu .menu-item{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: var(--typography);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all .3s ease-out;
+  padding-left: 2rem;
+  padding: 1.2rem 0 1.2rem 1.2rem;
+}
+
+.menu .menu-item.selected {
+  background-color: var(--main-color);
+  color: var(--background);
+}
+
+.menu .menu-item.selected path {
+  fill: var(--background);
+}
+
+.menu .menu-item:hover{
+  opacity: 1;
 }
 
 .sidebar ul {
@@ -117,11 +144,11 @@
 /* main */
 .main {
   position: absolute;
-  top: 60px;
+  /* top: 60px; */
   width: calc(100% - 260px);
   left: 260px;
   min-height: calc(100vh - 60px);
-  background-color: #f5f5f5;
+  background-color: var(--background);
 }
 
 .cards {
@@ -130,6 +157,19 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+}
+
+.cards-side-bar{
+  display:flex;
+  gap: 25rem;
+}
+.cards-data{
+  display: flex;
+  gap: 2rem;
+}
+.data-calendario{
+  display: flex;
+  gap: 1rem;
 }
 
 .cards .card {

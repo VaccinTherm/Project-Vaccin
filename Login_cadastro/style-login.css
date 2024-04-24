@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:wght@300;500;800&display=swap");
-
 /*=== GERAL ===========================*/
 * {
   margin: 0;
@@ -71,6 +69,10 @@ img {
 
 .form {
   padding: 0 6.4rem;
+}
+
+.form .title {
+  margin-bottom: 3.2rem;
 }
 
 #login .form {
@@ -179,7 +181,8 @@ img {
 }
 
 .form .input-group .error-input {
-  outline: 1px solid #b85454;
+  outline: 1px solid #c21212;
+  background-color: #d3404052;
 }
 
 .input-group .input-box input:focus {
@@ -194,7 +197,11 @@ img {
 }
 
 .error-message {
-  color: #e63c3c;
+  color: #c21212;
+  font-weight: 400;
+  background-color: #da7070b0;
+  padding: .6rem .8rem;
+  text-align: center;
 }
 
 .disabled {

@@ -145,7 +145,6 @@ header {
    .texto{
     color: var(--background);
     font-size: 16px;
-    margin-left:40px;
     text-align: justify;
     line-height: 30px;
   }
@@ -171,6 +170,13 @@ header {
     color: var(--main-color);
   }
 
+  .titulo_como_funciona{
+    font-size: 75px;
+    color: white;
+    margin-left: 45px;
+    margin-top: 20px;
+  }
+
   .titulo_voce_sabia{
     font-size: 75px;
     color: var(--main-color);
@@ -186,6 +192,7 @@ header {
     color: var(--typography);
     margin-left: 45px;
     margin-top: 50px;
+    text-align: justify;
   }
 
   .descricao_calculadora{
@@ -193,6 +200,8 @@ header {
     line-height: 40px;
     height: 40px;
     width: 800px;
+    margin-left: 45px;
+    margin-top: 50px;
   }
 
   .container2{

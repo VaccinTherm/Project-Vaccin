@@ -7,13 +7,6 @@ const ctxs = document.getElementById('myChartLine');
         label: 'Temperatura',
         data: [30, 29, 28, 25, 22, 23],
         borderWidth: 1,
-        backgroundColor: '#ff6384',
-        borderColor: '#ff6384'
-      },
-      {
-        label: 'Umidade',
-        data: [80, 82, 80, 85, 80, 83],
-        borderWidth: 1,
         backgroundColor: '#7FA9C7',
         borderColor: '#7FA9C7'
       }
@@ -28,13 +21,8 @@ const ctxs = document.getElementById('myChartLine');
     data: {
       labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
       datasets: [{
-        label: 'Temperatura Média',
-        data: [22, 24, 27, 23, 20, 18],
-        backgroundColor: '#ff6384',
-      },
-      {
-        label: 'Umidade Média',
-        data: [90, 89, 93, 87, 88, 82],
+        label: 'Umidade',
+        data: [60, 24, 27, 23, 20, 18],
         backgroundColor: '#7FA9C7',
       }
       ]

@@ -9,13 +9,21 @@ for (let i = 1; i <= 6; i++) {
 console.log(temp, umidade);
 
 const ctxs = document.getElementById('myChartLine');
-  new Chart(ctxs, {
+let graphLine = new Chart(ctxs, {
     type: 'line',
+    options: {
+      scales: {
+        y: {
+          max: 10,
+          min: -2
+        },
+      }
+    },
     data: {
       labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
       datasets: [{
         label: 'Temperatura',
-        data: [temp[0], temp[1], temp[2], temp[3], temp[4], temp[5]],
+        data: temp,
         borderWidth: 1,
         backgroundColor: '#ff6384',
         borderColor: '#ff6384'
@@ -23,18 +31,39 @@ const ctxs = document.getElementById('myChartLine');
       ]
     },
   });
-
+  
+  
+  
   const ctx = document.getElementById('myChartBar');
-  new Chart(ctx, {
+  let graphBar = new Chart(ctx, {
     type: 'bar',
+    options: {
+      scales: {
+        y: {
+          max: 80,
+          min: 50
+        },
+      }
+    },
     data: {
       labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
       datasets: [{
         label: 'Umidade Média',
-        data: [umidade[0], umidade[1], umidade[2], umidade[3], umidade[4], umidade[5]],
+        data: umidade,
         label: 'Umidade',
         backgroundColor: '#7FA9C7',
       }
-      ]
-    },
-  });
+    ]
+  },
+});
+
+setInterval(function() {
+  temp.unshift(Math.round(Math.random() * 8))
+  temp.pop();
+  umidade.unshift(Math.round(Math.random() * (75 - 65) + 65));
+  umidade.pop();
+  graphLine.data.datasets[0].data = temp;
+  graphLine.update('active');
+  graphBar.data.datasets[0].data = umidade;
+  graphBar.update('active');
+}, 2000);

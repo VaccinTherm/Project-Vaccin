@@ -1,90 +1,117 @@
 CREATE DATABASE vaccinTherm;
-
 USE vaccinTherm;
 
-
-CREATE TABLE Empresa (
+CREATE TABLE EMPRESA (
 idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(45) NOT NULL,
 email VARCHAR(45) NOT NULL,
 senha VARCHAR(45) NOT NULL,
-cnpj CHAR(14) NOT NULL,
-telefone CHAR(12) NOT NULL,
-Mensagem VARCHAR(300) NOT NULL,
-fkRepresentante INT,
-CONSTRAINT representante_empresa FOREIGN KEY (fkRepresentante) REFERENCES Empresa(idEmpresa)
+cnpj char(14) NOT NULL,
+telefone char(12),
+mensagem VARCHAR(300)
 );
 
-INSERT INTO Empresa VALUES 
-(DEFAULT, 'AMIL', 'AmbulatorioAmil@outlook.com', 'socorre123', '12365478547458', '11 9652-5824', 'Requisição de sensores dht11', null),
-(DEFAULT, 'AMA CAPÃO', 'amacapaoredondo@outlook.com', 'prontoAtendimento123', '12367548796213', '11 9528-5822','Implantação da dashboard em nosso sistema ', null),
-(DEFAULT, 'SUS', 'sistemaunicodesaude@outlook.com', 'atendimento123', '12367745125478', '11 9628-5826', 'Gostaria de saber mais sobre dados', 2),
-(DEFAULT, 'Ambulatorio', 'AmbulatorioAmil@outlook.com', 'socorre123', '12365478547458', '11 9528-5824','Requisição de sensores dht11', 1);
+-- INSERIR OS VALORES DA EMPRESA 
 
-SELECT * FROM Empresa;
+INSERT INTO EMPRESA VALUES
+();
+
+CREATE TABLE USUARIO (
+idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(45) NOT NULL,
+email VARCHAR(45) NOT NULL,
+senha VARCHAR(45) NOT NULL,
+fkEmpresa INT,
+CONSTRAINT fkempresa_usuario FOREIGN KEY (fkEmpresa) REFERENCES EMPRESA(idEmpresa)
+);
+
+-- INSERIR OS VALORES DO USUÁRIO
+
+INSERT INTO USUARIO VALUES
+();
+
 
 CREATE TABLE Sensor (
-idSensor INT PRIMARY KEY AUTO_INCREMENT, 
-nome VARCHAR(45) NOT NULL,
-especialidade VARCHAR(45) NOT NULL,
-status VARCHAR(45) NOT NULL,
-CONSTRAINT chkSensor CHECK (status in ('ativo', 'inativo'))
+idSensor INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(45),
+especialidade VARCHAR(45),
+status VARCHAR(30),
+CONSTRAINT chk_sensor CHECK (status in ('Habiitado', 'Desabilitado'))
 );
 
-INSERT INTO Sensor VALUE
-(DEFAULT, 'DHT11', 'Temperatura e umidade', 'ativo'),
-(DEFAULT, 'DHT11', 'Temperatura e umidade', 'inativo');
+-- INSERIR OS VALORES DO SENSOR
 
-CREATE TABLE Vacina (
+INSERT INTO SENSOR VALUES
+();
+
+CREATE TABLE VACINA (
 idVacina INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(45) NOT NULL,
-tipo VARCHAR(45) NOT NULL,
-temperatura_maxima_suportada DECIMAL (4,2) NOT NULL,
-temperatura_minima_suportada DECIMAL (4,2) NOT NULL,
-umidade_maxima_suportada INT NOT NULL,
-umidade_minima_suportada INT NOT NULL
+nome VARCHAR(45),
+tipo VARCHAR(45),
+temperatura_maxima_suportada DECIMAL(4,2),
+temperatura_minima_suportada DECIMAL(4,2),
+umidade_maxima_suportada INT,
+umidade_minima_suportada INT
 );
 
--- INSERIR VALORES DAS VACINAS 
+-- INSERIR OS VALORES VACINA
 
+INSERT INTO VACINA VALUES
+();
 
-CREATE TABLE Veiculo (
-idVeiculo INT AUTO_INCREMENT,
-data_entrega DATE,
+CREATE TABLE VEICULO (
+idVeiculo INT NOT NULL,
+data_entrega INT NOT NULL,
+CONSTRAINT pkComposta PRIMARY KEY (idVeiculo, data_entrega),
 placa VARCHAR(45) NOT NULL,
-modeloVeiculo VARCHAR(45),
-motorista VARCHAR(45) NOT NULL,
+modelo_veiculo VARCHAR(45),
+responsavel VARCHAR(45) NOT NULL,
 fkEmpresa INT,
-CONSTRAINT veiculo_empresa FOREIGN KEY (fkEmpresa) REFERENCES Empresa(idEmpresa),
+CONSTRAINT fkempresa_veiculo FOREIGN KEY (fkEmpresa) REFERENCES EMPRESA(idEmpresa),
 fkSensor INT,
-CONSTRAINT sensor_veiculo FOREIGN KEY (fkSensor) REFERENCES Sensor (idSensor),
-CONSTRAINT pkComposta PRIMARY KEY (idVeiculo,data_entrega)
+CONSTRAINT fkSensor FOREIGN KEY (fkSensor) REFERENCES SENSOR(idSensor),
+fkVacina INT,
+CONSTRAINT vacina_veiculo FOREIGN KEY (fkVacina) REFERENCES Vacina(idVacina)
 );
 
--- INSERIR VALORES DOS VEICULOS
+-- INSERIR OS VALORES VEICULOS
 
-CREATE TABLE Registro(
-idRegistro INT auto_increment,
-data_hora DATETIME NOT NULL,
-dht11_temperatura DECIMAL (4,2) NOT NULL,
-dht11_umidade INT NOT NULL,
-fkSensor INT NOT NULL, 
-CONSTRAINT registro_sensor FOREIGN KEY  (fkSensor) REFERENCES Sensor (idSensor),
-fkVacina_registro INT NOT NULL, 
-CONSTRAINT registro_Vacina FOREIGN KEY  (fkVacina_registro) REFERENCES Vacina (idVacina),
-CONSTRAINT pkRegistro PRIMARY KEY (idRegistro,fkSensor)
+INSERT INTO VEICULOS VALUES
+();
+
+CREATE TABLE REGISTRO (
+idRegistro INT NOT NULL,
+dataHora DATETIME,
+dht11_umidade INT,
+dht11_temperatura DECIMAL (4,2),
+fkSensor_registro INT,
+CONSTRAINT fksensor_registro FOREIGN KEY (fkSensor_registro) REFERENCES SENSOR(idSensor),
+fkVacina_registro INT,
+CONSTRAINT vacina_registro FOREIGN KEY (fkVacina_registro) REFERENCES Vacina(idVacina),
+fkUsuario_representante INT,
+CONSTRAINT usuario_representante FOREIGN KEY (fkUsuario_representante) REFERENCES USUARIO (idUsuario)
 );
 
--- INSERIR VALORES DOS REGISTROS
+-- INSERIR OS VALORES VEICULOS
+
+INSERT INTO REGISTRO VALUES
+();
 
 
-INSERT INTO Vacina (nome, tipo, temperatura_maxima_suportada, temperatura_minima_suportada, umidade_maxima_suportada, umidade_minima_suportada) 
-VALUES 
-('Vacina COVID-19', 'Injeção', 8.00, 2.00, 80, 50),
-('Vacina Gripe', 'Injeção', 10.00, 5.00, 85, 60),
-('Vacina TetraViral', 'Injeção', 5.00, -5.00, 90, 40);
+-- EXIBIR CADA TABELA SEPARADAMENTE 
+SELECT * FROM EMPRESA;
+SELECT * FROM USUARIO;
+SELECT * FROM SENSOR;
+SELECT * FROM VACINA;
+SELECT * FROM VEICULO;
+SELECT * FROM REGISTRO;
 
+-- FAZER O SELECT SIMPLES
 
+<<<<<<< HEAD
+-- EXIBIR APENAS O NOME DA EMPRESA E A DESCRICAO COM O SEU DETERMINADO REPRESENTANTE, EXIBIR NA CONSULTA A HORA DA ENTREGA
+-- O TIPO DE VACINA E O VEICULO CORRESPONDENTE CITANDO  O  NOME DO RESPONSÁVEL, E OS REGISTROS EM TEMPO REAL
+=======
 INSERT INTO Veiculo (idVeiculo, data_entrega, placa, modeloVeiculo, motorista, fkEmpresa, fkSensor) 
 VALUES 
 (1, '2024-04-20', 'ABC1234', 'Ford Transit', 'Pedro Souza', 1, 1),
@@ -96,3 +123,5 @@ VALUES
 (1, '2024-04-20 08:00:00', 6.50, 75, 1, 1),
 (2, '2024-04-21 09:30:00', 7.20, 70, 2, 2);
 
+select * from Registro;
+>>>>>>> 91aa91968c8d6e6360620b787d16538813ee923c

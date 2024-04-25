@@ -21,11 +21,13 @@
 body {
   font-size: 2rem;
   font-family: Manrope;
+  overflow: hidden;
 }
 
-.logo{
+.logo {
   padding: 3rem 1.2rem 0 0.5rem;
 }
+
 .logo h2 {
   color: rgb(48, 101, 101);
 }
@@ -77,19 +79,30 @@ body {
   width: 260px;
   height: calc(100% - 60px);
   background-color: var(--background);
-  overflow-x: hidden;
+  height: 100vh;
   border-right: 0.8px solid var(--main-color);
-  
-  
+
+
 }
 
-.menu{
+.cards-inicio .nome {
+  color: var(--main-color);
+  font-size: 48px;
+  padding: 2rem;
+}
+
+.cards-inicio .descricao-nome {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.menu {
   display: flex;
   flex-direction: column;
   padding-top: 3.2rem;
 }
 
-.menu .menu-item{
+.menu .menu-item {
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -110,7 +123,7 @@ body {
   fill: var(--background);
 }
 
-.menu .menu-item:hover{
+.menu .menu-item:hover {
   opacity: 1;
 }
 
@@ -137,7 +150,8 @@ body {
   font-size: 24px;
   text-align: center;
 }
-.home_sidebar{
+
+.home_sidebar {
   margin-top: 6rem;
 }
 
@@ -159,15 +173,19 @@ body {
   grid-gap: 20px;
 }
 
-.cards-side-bar{
-  display:flex;
+.cards-side-bar {
+  display: flex;
   gap: 25rem;
+
 }
-.cards-data{
+
+.cards-data {
   display: flex;
   gap: 2rem;
+  padding: 2rem;
 }
-.data-calendario{
+
+.data-calendario {
   display: flex;
   gap: 1rem;
 }
@@ -182,7 +200,8 @@ body {
   box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
 
 }
-.titulo_metrica{
+
+.titulo_metrica {
   font-weight: 700;
 }
 
@@ -201,30 +220,30 @@ body {
 .number1 {
   font-size: 35px;
   font-weight: 500;
-  color: rgb(0, 103, 162);
+  color: rgb(4, 85, 132);
 }
 
 .number2 {
   font-size: 35px;
   font-weight: 500;
-  color: rgb(232, 252, 4);
+  color: rgb(255, 224, 137);
 }
 
 .number3 {
   font-size: 35px;
   font-weight: 500;
-  color: rgb(16, 255, 4);
+  color: rgb(181, 254, 160);
 }
 
 .number4 {
   font-size: 35px;
   font-weight: 500;
-  color: rgb(250, 0, 0);
+  color: rgb(255, 142, 142);
 }
 
 
 .card-name {
-  color: #551818;
+  color: #714242;
   font-weight: 600;
 }
 
@@ -276,129 +295,49 @@ body {
   /* Opacidade total */
 }
 
-.btnF1 {
-  background-color: rgb(170, 193, 228);
-  padding: 10px 24px;
-  border-color: yellow;
-  cursor: pointer;
-  font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
-  animation: piscar 1s infinite;
+.container-analytics {
+  margin-top: 1rem;
 }
 
-.btnF2 {
-  background-color: rgb(94, 134, 196);
-  padding: 10px 24px;
-  border-color: yellow;
-  cursor: pointer;
-  font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
+.chart h3 {
+  color: var(--typography);
 }
 
-.btnF3 {
-  background-color: rgb(16, 71, 153);
+.ideal_umidade,
+.ideal_temp {
+  background-color: rgb(177, 244, 177);
   padding: 10px 24px;
-  border-color: yellow;
+  border-color: rgb(255, 255, 255);
   cursor: pointer;
   font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
+  font-weight: 400;
 }
 
-.btnI {
-  background-color: green;
+.critico_umidade,
+.critico_temp {
+  background-color: rgb(232, 232, 141);
   padding: 10px 24px;
-  border-color: yellow;
+  border-color: rgb(255, 255, 255);
   cursor: pointer;
   font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
+  font-weight: 400;
 }
 
-.btnQ3 {
-  background-color: rgb(235, 235, 19);
+.alerta_umidade,
+.alerta_temp {
+  background-color: rgb(251, 216, 151);
   padding: 10px 24px;
-  border-color: yellow;
+  border-color: rgb(255, 255, 255);
   cursor: pointer;
   font-family: 'Dosis', 'sans-serif';
   font-weight: bold;
 }
 
-.btnQ2 {
-  background-color: orange;
+.emergencia_umidade,
+.emergencia_temp {
+  background-color: rgb(247, 156, 156);
   padding: 10px 24px;
-  border-color: yellow;
-  cursor: pointer;
-  font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
-}
-
-.btnQ1 {
-  background-color: red;
-  padding: 10px 24px;
-  border-color: yellow;
-  cursor: pointer;
-  font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
-  animation: piscar 1s infinite;
-}
-
-.btnUF1 {
-  background-color: rgb(170, 193, 228);
-  padding: 10px 24px;
-  border-color: yellow;
-  cursor: pointer;
-  font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
-}
-
-.btnUF2 {
-  background-color: rgb(94, 134, 196);
-  padding: 10px 24px;
-  border-color: yellow;
-  cursor: pointer;
-  font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
-}
-
-.btnUF3 {
-  background-color: rgb(16, 71, 153);
-  padding: 10px 24px;
-  border-color: yellow;
-  cursor: pointer;
-  font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
-}
-
-.btnUI {
-  background-color: green;
-  padding: 10px 24px;
-  border-color: yellow;
-  cursor: pointer;
-  font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
-}
-
-.btnUQ3 {
-  background-color: yellow;
-  padding: 10px 24px;
-  border-color: yellow;
-  cursor: pointer;
-  font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
-}
-
-.btnUQ2 {
-  background-color: orange;
-  padding: 10px 24px;
-  border-color: yellow;
-  cursor: pointer;
-  font-family: 'Dosis', 'sans-serif';
-  font-weight: bold;
-}
-
-.btnUQ1 {
-  background-color: red;
-  padding: 10px 24px;
-  border-color: yellow;
+  border-color: rgb(255, 255, 255);
   cursor: pointer;
   font-family: 'Dosis', 'sans-serif';
   font-weight: bold;

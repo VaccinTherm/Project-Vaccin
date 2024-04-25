@@ -70,7 +70,7 @@
             if(loginEmail.value != '' && loginPass.value != '') {
                 // Verificando se o campo de email possui arroba
                 if (loginEmail.value.indexOf('@') > -1) {
-                    alert('Logado');
+                    window.location="../dashboard/index.html" 
                 } else {
                     errorSpanEmail.classList.remove('disabled');
                     errorSpanEmail.innerHTML = 'Email inválido';

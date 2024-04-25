@@ -17,20 +17,9 @@ const ctxs = document.getElementById('myChartLine');
         label: 'Temperatura',
         data: [temp[0], temp[1], temp[2], temp[3], temp[4], temp[5]],
         borderWidth: 1,
-<<<<<<< HEAD
         backgroundColor: '#ff6384',
         borderColor: '#ff6384'
       },
-      {
-        label: 'Umidade',
-        data: [umidade[0], umidade[1], umidade[2], umidade[3], umidade[4], umidade[5]],
-        borderWidth: 1,
-=======
->>>>>>> cd394955c32c408d5b3e56822aeb841efdb663da
-        backgroundColor: '#7FA9C7',
-        borderColor: '#7FA9C7'
-      }
-
       ]
     },
   });
@@ -41,18 +30,9 @@ const ctxs = document.getElementById('myChartLine');
     data: {
       labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
       datasets: [{
-<<<<<<< HEAD
-        label: 'Temperatura Média',
-        data: [temp[0], temp[1], temp[2], temp[3], temp[4], temp[5]],
-        backgroundColor: '#ff6384',
-      },
-      {
         label: 'Umidade Média',
         data: [umidade[0], umidade[1], umidade[2], umidade[3], umidade[4], umidade[5]],
-=======
         label: 'Umidade',
-        data: [60, 24, 27, 23, 20, 18],
->>>>>>> cd394955c32c408d5b3e56822aeb841efdb663da
         backgroundColor: '#7FA9C7',
       }
       ]

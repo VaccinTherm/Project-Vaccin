@@ -201,9 +201,9 @@
     span_resposta.innerHTML =
       `Confira os valores abaixo:<br><br>
   Total das vacinas: <b>${totalVacinas} Vacinas</b><br><br>
-  Valor gasto: <b>R$${valorGasto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} Reais</b><br><br>
+  Valor gasto: <b>${valorGasto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} Reais</b><br><br>
   Possível perda: <span style="color: red;"><b>${totalVacinas * 0.40} vacinas</b></span>, que equivale a <span style="font-weight: bolder;">40%</span> das vacinas.<br><br>
-  Valor dessa perda: <span style="color: red;"><b>R$${numeroFormatado} Reais</b><br><br></span> 
+  Valor dessa perda: <span style="color: red;"><b>${numeroFormatado} Reais</b><br><br></span> 
   Com a solução da VaccinTherm, você poderá monitorar os dados<br><br> de temperatura e umidade dos seus transportes.`
     modal.classList.add('active')
   }

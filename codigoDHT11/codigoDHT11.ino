@@ -14,7 +14,7 @@ void loop() {
   float temperatura = dht_1.readTemperature();
 
   umidade = umidade;
-  temperatura = temperatura - 10;
+  temperatura = temperatura - 20;
 
 
 
@@ -23,8 +23,7 @@ void loop() {
   } else {
     Serial.print("");
     Serial.print(umidade);
-    Serial.print("  ");
-    Serial.print(" ");
+    Serial.print(";");
     Serial.print(temperatura);
     Serial.println(" ");
   }

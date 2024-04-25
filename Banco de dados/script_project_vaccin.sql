@@ -108,5 +108,20 @@ SELECT * FROM REGISTRO;
 
 -- FAZER O SELECT SIMPLES
 
+<<<<<<< HEAD
 -- EXIBIR APENAS O NOME DA EMPRESA E A DESCRICAO COM O SEU DETERMINADO REPRESENTANTE, EXIBIR NA CONSULTA A HORA DA ENTREGA
 -- O TIPO DE VACINA E O VEICULO CORRESPONDENTE CITANDO  O  NOME DO RESPONSÁVEL, E OS REGISTROS EM TEMPO REAL
+=======
+INSERT INTO Veiculo (idVeiculo, data_entrega, placa, modeloVeiculo, motorista, fkEmpresa, fkSensor) 
+VALUES 
+(1, '2024-04-20', 'ABC1234', 'Ford Transit', 'Pedro Souza', 1, 1),
+(2, '2024-04-21', 'DEF5678', 'Fiat Fiorino', 'Ana Oliveira', 2, 2),
+(3, '2024-04-22', 'GHI9012', 'Volkswagen Kombi', 'Marcos Santos', 3, 1);
+
+INSERT INTO Registro (idRegistro, data_hora, dht11_temperatura, dht11_umidade, fkSensor, fkVacina_registro) 
+VALUES 
+(1, '2024-04-20 08:00:00', 6.50, 75, 1, 1),
+(2, '2024-04-21 09:30:00', 7.20, 70, 2, 2);
+
+select * from Registro;
+>>>>>>> 91aa91968c8d6e6360620b787d16538813ee923c

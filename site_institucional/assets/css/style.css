@@ -249,8 +249,6 @@ section#contact {
 
 }
 
- 
-
 section#contact .wrapper {
 
   display: flex;
@@ -457,17 +455,9 @@ section#contact .form .btn-form {
 
 }
 
- 
-
 section#contact .form .btn-form:hover { 
-
   opacity: 1;
-
 }
-
- 
-
- 
 
 /*=== FOOTER ===========================*/
 

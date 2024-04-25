@@ -1,3 +1,13 @@
+let temp = []
+let umidade = []
+
+for (let i = 1; i <= 6; i++) {  
+  temp.push(Math.round(Math.random() * 8));
+  umidade.push(Math.round(Math.random() * (75 - 65) + 65));
+}
+
+console.log(temp, umidade);
+
 const ctxs = document.getElementById('myChartLine');
   new Chart(ctxs, {
     type: 'line',
@@ -5,14 +15,14 @@ const ctxs = document.getElementById('myChartLine');
       labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
       datasets: [{
         label: 'Temperatura',
-        data: [30, 29, 28, 25, 22, 23],
+        data: [temp[0], temp[1], temp[2], temp[3], temp[4], temp[5]],
         borderWidth: 1,
         backgroundColor: '#ff6384',
         borderColor: '#ff6384'
       },
       {
         label: 'Umidade',
-        data: [80, 82, 80, 85, 80, 83],
+        data: [umidade[0], umidade[1], umidade[2], umidade[3], umidade[4], umidade[5]],
         borderWidth: 1,
         backgroundColor: '#7FA9C7',
         borderColor: '#7FA9C7'
@@ -29,12 +39,12 @@ const ctxs = document.getElementById('myChartLine');
       labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
       datasets: [{
         label: 'Temperatura Média',
-        data: [22, 24, 27, 23, 20, 18],
+        data: [temp[0], temp[1], temp[2], temp[3], temp[4], temp[5]],
         backgroundColor: '#ff6384',
       },
       {
         label: 'Umidade Média',
-        data: [90, 89, 93, 87, 88, 82],
+        data: [umidade[0], umidade[1], umidade[2], umidade[3], umidade[4], umidade[5]],
         backgroundColor: '#7FA9C7',
       }
       ]

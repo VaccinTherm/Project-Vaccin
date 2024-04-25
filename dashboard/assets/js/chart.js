@@ -40,8 +40,8 @@ let graphLine = new Chart(ctxs, {
     options: {
       scales: {
         y: {
-          max: 80,
-          min: 50
+          max: 90,
+          min: 10
         },
       }
     },
@@ -58,12 +58,12 @@ let graphLine = new Chart(ctxs, {
 });
 
 setInterval(function() {
-  temp.unshift(Math.round(Math.random() * 8))
-  temp.pop();
-  umidade.unshift(Math.round(Math.random() * (75 - 65) + 65));
-  umidade.pop();
+  temp.push(Math.round(Math.random() * (8 - 2) + 2))
+  temp.shift();
+  umidade.push(Math.round(Math.random() * (80 - 20) + 20));
+  umidade.shift();
   graphLine.data.datasets[0].data = temp;
   graphLine.update('active');
   graphBar.data.datasets[0].data = umidade;
   graphBar.update('active');
-}, 2000);
+}, 1000);

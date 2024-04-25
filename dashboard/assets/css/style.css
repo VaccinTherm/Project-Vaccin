@@ -175,8 +175,8 @@ body {
 
 .cards-side-bar {
   display: flex;
-  gap: 25rem;
-
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
 }
 
 .cards-data {
@@ -203,6 +203,10 @@ body {
 
 .btn-group {
   padding-left: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80rem;
+  justify-content: center;
 }
 
 .titulo_metrica {

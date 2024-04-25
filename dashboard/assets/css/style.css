@@ -21,7 +21,7 @@
 body {
   font-size: 2rem;
   font-family: Manrope;
-  overflow: hidden;
+  max-width: 100%;
 }
 
 .logo {
@@ -199,6 +199,10 @@ body {
   border-radius: 5px;
   box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
 
+}
+
+.btn-group {
+  padding-left: 2rem;
 }
 
 .titulo_metrica {

@@ -25,8 +25,8 @@ let graphLine = new Chart(ctxs, {
         label: 'Temperatura',
         data: temp,
         borderWidth: 1,
-        backgroundColor: '#ff6384',
-        borderColor: '#ff6384'
+        backgroundColor: '#3C5B5F',
+        borderColor: '#3C5B5F'
       },
       ]
     },

@@ -144,7 +144,7 @@ header {
 
    .texto{
     color: var(--background);
-    font-size: 16px;
+    font-size: 30px;
     text-align: justify;
     line-height: 30px;
   }
@@ -174,9 +174,9 @@ header {
 
   .titulo_como_funciona{
 <<<<<<< HEAD
-    font-size: 50px;
+    font-size: 900rem;
 =======
-    font-size: 60px;
+    font-size: 900rem;
 >>>>>>> 5a41b31df05d64b855a330f7cc82261985a181d9
     color: white;
     color: #7FA9C7;

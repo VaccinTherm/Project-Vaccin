@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    
+
     <title>Cadastro</title>
 </head>
 
@@ -19,9 +19,9 @@
             <div class="title">
                 <h1>Cadastre-se</h1>
             </div>
-            
+
             <span class="error-message disabled"></span>
-            
+
             <div class="form-box">
                 <div class="input-group">
                     <div class="input-box">
@@ -29,47 +29,49 @@
                         <input id="company" type="text" name="company" placeholder="Nome da empresa" autocomplete="off">
                     </div>
 
-                    <div class="input-box">
-                        <label for="representative">Representante</label>
-                        <input id="representative" type="text" name="representative"
-                            placeholder="Representante da empresa"
-                            autocomplete="off">
-                    </div>
 
                     <div class="input-box">
                         <label for="email">E-mail</label>
-                        <input id="cadastro_email" type="email" name="email" placeholder="Digite o seu email" autocomplete="off">
+                        <input id="cadastro_email" type="email" name="email" placeholder="Digite o seu email"
+                            autocomplete="off">
+                    </div>
+                    <div class="input-box">
+                        <label for="representative">Representante</label>
+                        <input id="representative" type="text" name="representative"
+                            placeholder="Representante da empresa" autocomplete="off">
                     </div>
 
                 </div>
 
                 <div class="input-group">
+
+                    <div class="input-box">
+                        <label for="cnpj">CNPJ</label>
+                        <input id="cnpj" type="text" name="cnpj" placeholder="Digite seu CNPJ" autocomplete="off">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="cadastro_password" type="password" name="password" placeholder="Digite a sua senha"
+                            autocomplete="off">
+                    </div>
+
                     <div class="input-box">
                         <label for="number">Celular</label>
                         <input id="number" type="tel" name="number" placeholder="(xx) xxxxx-xxxx" autocomplete="off">
                     </div>
 
-                    <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input id="cadastro_password" type="password" name="password" placeholder="Digite a sua senha" autocomplete="off">
-                    </div>
-
-                    <div class="input-box">
-                        <label for="cnpj">CNPJ</label>
-                        <input id="cnpj" type="text" name="cnpj"
-                            placeholder="Digite seu CNPJ"
-                            autocomplete="off">
-                    </div>
                 </div>
             </div>
 
             <div class="buttons">
                 <a class="btn-primary" onclick="validation()">Criar conta</a>
-    
+
                 <a href="./login.html" class="external-link">Já tenho uma conta</a>
             </div>
         </div>
 </body>
+
 </html>
 
 <script>
@@ -93,44 +95,44 @@
         cadastroSenha.classList.remove('error-input');
         cnpj.classList.remove('error-input');
 
-        if(empresa.value != '' && representante.value != '' &&
+        if (empresa.value != '' && representante.value != '' &&
             cadastroEmail.value != '' && celNum.value != '' &&
             cadastroSenha.value != '' && cnpj.value != '') {
-                // Verificando se o campo de email possui arroba
-                if (cadastroEmail.value.indexOf('@') > -1) {
-                    if (!isNaN(celNum.value)) {
-                        if(cadastroSenha.value.length > 5) {
-                            if(!isNaN(cnpj.value)) {
-                                alert('Cadastrado com sucesso');
-                            } else {
-                                spanErro.classList.remove('disabled');
-                                spanErro.innerHTML = 'CNPJ inválido';
-                                cnpj.classList.add('error-input');
-                            }
+            // Verificando se o campo de email possui arroba
+            if (cadastroEmail.value.indexOf('@') > -1) {
+                if (!isNaN(celNum.value)) {
+                    if (cadastroSenha.value.length > 5) {
+                        if (!isNaN(cnpj.value)) {
+                            alert('Cadastrado com sucesso');
                         } else {
                             spanErro.classList.remove('disabled');
-                            spanErro.innerHTML = 'A senha deve conter no mínino 6 caracteres';
-                            cadastroSenha.classList.add('error-input');
+                            spanErro.innerHTML = 'CNPJ inválido';
+                            cnpj.classList.add('error-input');
                         }
                     } else {
                         spanErro.classList.remove('disabled');
-                        spanErro.innerHTML = 'Número inválido inválido';
-                        celNum.classList.add('error-input');
+                        spanErro.innerHTML = 'A senha deve conter no mínino 6 caracteres';
+                        cadastroSenha.classList.add('error-input');
                     }
                 } else {
                     spanErro.classList.remove('disabled');
-                    spanErro.innerHTML = 'Email inválido';
-                    cadastroEmail.classList.add('error-input');
+                    spanErro.innerHTML = 'Número inválido inválido';
+                    celNum.classList.add('error-input');
                 }
             } else {
                 spanErro.classList.remove('disabled');
-                spanErro.innerHTML = 'Preencha todos os campos';
-                empresa.classList.add('error-input');
-                representante.classList.add('error-input');
+                spanErro.innerHTML = 'Email inválido';
                 cadastroEmail.classList.add('error-input');
-                celNum.classList.add('error-input');
-                cadastroSenha.classList.add('error-input');
-                cnpj.classList.add('error-input');
             }
+        } else {
+            spanErro.classList.remove('disabled');
+            spanErro.innerHTML = 'Preencha todos os campos';
+            empresa.classList.add('error-input');
+            representante.classList.add('error-input');
+            cadastroEmail.classList.add('error-input');
+            celNum.classList.add('error-input');
+            cadastroSenha.classList.add('error-input');
+            cnpj.classList.add('error-input');
+        }
     }
 </script>

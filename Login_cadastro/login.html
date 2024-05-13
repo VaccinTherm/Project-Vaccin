@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+
+<body id="login">
+    <div class="container">
+        <div class="form">
+            <div class="form-box">
+                <div class="title">
+                    <h1>Login</h1>
+                </div>
+                
+                <div class="input-group">
+                    <span class="error-message disabled"></span>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="login_email" type="email" name="email" placeholder="Digite o seu email" autocomplete="off">
+                        <span class="error-message disabled"></span>
+                    </div>
+    
+                    <div class="input-box"> 
+                        <label for="password">Senha</label>
+                        <input id="login_password" type="password" name="password" placeholder="Digite a sua senha" autocomplete="off">
+                        <span class="error-message disabled"></span>
+                    </div>
+    
+                    <div class="btn-primary" onclick="validation()">Entrar</div>
+    
+                    <a href="#" class="external-link">Esqueci minha senha</a>
+    
+                    <a href="./cadastro.html" class="external-link">Criar uma conta</a>
+                </div>
+            </div>
+
+            <div class="form-image">
+                <img src="./login-vector.svg">
+            </div>
+    </div>
+    
+    <script>
+        // Validação dos campos do login
+        function validation() {
+            let loginEmail = document.getElementById('login_email');
+            let loginPass = document.getElementById('login_password');
+            const ERROR_SPAN = document.getElementsByClassName('error-message')
+            let errorSpanForm = ERROR_SPAN[0];
+            let errorSpanEmail = ERROR_SPAN[1];
+            let errorSpanPass = ERROR_SPAN[2];
+
+            // Removendo o conteúdo de todos os spans de erro
+            for (let i = 0; i < ERROR_SPAN.length; i++) {
+                ERROR_SPAN[i].innerHTML = '';
+            }
+
+            // Removendo as classes de erro dos inputs
+            loginEmail.classList.remove('error-input');
+            loginPass.classList.remove('error-input');
+            
+            // Verificando se todos os campos não estão vazios
+            if(loginEmail.value != '' && loginPass.value != '') {
+                // Verificando se o campo de email possui arroba
+                if (loginEmail.value.indexOf('@') > -1) {
+                    window.location="../dashboard/index.html";
+                } else {
+                    errorSpanEmail.classList.remove('disabled');
+                    errorSpanEmail.innerHTML = 'Email inválido';
+                    loginEmail.classList.add('error-input');
+                }
+            } else {
+                errorSpanForm.classList.remove('disabled');
+                errorSpanForm.innerHTML = 'Preencha todos os campos';
+                loginEmail.classList.add('error-input');
+                loginPass.classList.add('error-input');
+            }
+        }
+    </script>
+</body>

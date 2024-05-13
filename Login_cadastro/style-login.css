@@ -1,0 +1,209 @@
+/*=== GERAL ===========================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #7fa9c7;
+  --typography: #3c5b5f;
+  --background: #ecebe7;
+
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+*::selection {
+  color: var(--typography);
+  background-color: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope";
+  font-size: 2rem;
+
+  overflow: overlay;
+
+  color: var(--background);
+  background-color: var(--background);
+
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2rem;
+  letter-spacing: 0.36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: var(--background);
+  font-weight: 300;
+  cursor: pointer;
+}
+
+img {
+  user-select: none;
+}
+
+.container {
+  background-color: var(--typography);
+  border: 2px solid var(--typography);
+  border-radius: 10px;
+}
+
+#cadastro .container {
+  padding: 3.2rem 0;
+}
+
+.form {
+  padding: 0 6.4rem;
+}
+
+.form .title {
+  margin-bottom: 3.2rem;
+}
+
+#login .form {
+  padding: 0 0 0 6.4rem;
+  color: var(--background);
+}
+
+#login .form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.form .form-box {
+  display: flex;
+  gap: 3.2rem;
+  margin: 3.2rem 0;
+  flex-wrap: wrap;
+}
+
+.form .form-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    border-radius: 0 10px 10px 0;
+}
+
+.form .form-image img {
+  width: 32rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+  max-height: 100vh;
+}
+
+.input-group .input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input-group .input-box label {
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--background);
+}
+
+.input-group .input-box input {
+  height: 4.8rem;
+  width: 32rem;
+  font-family: "Manrope";
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--background);
+  background-color: transparent;
+  outline: 1px solid rgba(236, 235, 231, 0.5);
+  border: none;
+  border-radius: 10px;
+  padding-left: 1.6rem;
+}
+
+.input-group .input-box input::placeholder {
+  font-family: "Manrope";
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.36px;
+  font-weight: 300;
+  color: var(--background);
+  opacity: 0.5;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  color: var(--typography);
+  opacity: 0.7;
+  font-weight: 400;
+  width: 32rem;
+  height: 4.8rem;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 1;
+}
+
+.form .external-link,
+.form .external-link:visited,
+.form .external-link:active {
+    font-weight: 300;
+    opacity: .7;
+    transition: .3s;
+}
+
+.form .external-link:hover {
+    opacity: 1;
+}
+
+.form .input-group .error-input {
+  outline: 1px solid #c21212;
+  background-color: #d3404052;
+}
+
+.input-group .input-box input:focus {
+  outline: 1px solid var(--background);
+}
+
+#cadastro .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.error-message {
+  color: #c21212;
+  font-weight: 400;
+  background-color: #da7070b0;
+  padding: .6rem .8rem;
+  text-align: center;
+}
+
+.disabled {
+  display: none;
+}

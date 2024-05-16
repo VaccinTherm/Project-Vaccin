@@ -9,16 +9,35 @@ comandos para mysql server
 CREATE DATABASE vaccinTherm;
 USE vaccinTherm;
 
-CREATE TABLE CADASTRO (
-idCadastro int primary key auto_increment,
-empresa varchar(45),
-celular varchar(45),
-representante varchar(45),
-senha varchar(45),
-email varchar(255),
-cnpj varchar(100));
+CREATE TABLE EMPRESA (
+cnpj char(14) PRIMARY KEY,
+nome VARCHAR(45) NOT NULL,
+mensagem VARCHAR(300)
+);
 
-INSERT INTO CADASTRO (empresa, celular, representante, senha, email, cnpj) 
-VALUES ('Minha Empresa', '99999999999', 'Representante', 'senha123', 'exemplo@email.com', '12345678901234');
+-- INSERIR OS VALORES DA EMPRESA 
 
-select * from CADASTRO;
+INSERT INTO EMPRESA VALUES
+('12345678912345', 'Transporte Hospitalar', 'requisição de novos sensores' );
+
+
+CREATE TABLE USUARIO (
+idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(45) NOT NULL,
+email VARCHAR(45) NOT NULL,
+senha VARCHAR(45) NOT NULL,
+celular char(11),
+fkEmpresa char(14),
+CONSTRAINT fkempresa_usuario FOREIGN KEY (fkEmpresa) REFERENCES EMPRESA(cnpj)
+);
+
+-- INSERIR OS VALORES DO USUÁRIO
+
+INSERT INTO USUARIO VALUES
+(DEFAULT, 'Fernanda', 'caramico@outlook.com', 'sptech.schol123', 11976543562, '12345678912345');
+
+
+select * from usuario;
+select * from empresa;
+
+select * from usuario join empresa on usuario.fkempresa = empresa.cnpj;

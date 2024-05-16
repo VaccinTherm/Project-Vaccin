@@ -15,11 +15,20 @@ function cadastrar(empresa, celular, representante, senha, email, cnpj) {
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
-    var instrucaoSql = `
-        INSERT INTO CADASTRO (empresa, celular, representante, senha, email, cnpj) VALUES ('${empresa}', '${celular}', '${representante}', '${senha}', '${email}', '${cnpj}');
-    `;
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
+    var instrucaoSqlEmpresa = `
+        INSERT INTO empresa (cnpj, nome) VALUES ('${cnpj}', '${empresa}');
+        `;
+
+    var instrucaoSqlUsuario = `
+    INSERT INTO usuario (nome, email, senha, celular, fkEmpresa) VALUES ('${representante}', '${email}', '${senha}', '${celular}', '${cnpj}');
+        `;
+
+        console.log("Executando a instrução SQL Empresa: \n" + instrucaoSqlEmpresa);
+        console.log("Executando a instrução SQL Usuario: \n" + instrucaoSqlUsuario);
+        
+        // Execute cada instrução SQL separadamente
+        database.executar(instrucaoSqlEmpresa);
+        return database.executar(instrucaoSqlUsuario);
 }
 
 module.exports = {

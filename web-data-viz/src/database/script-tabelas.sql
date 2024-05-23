@@ -15,11 +15,6 @@ nome VARCHAR(45) NOT NULL,
 mensagem VARCHAR(300)
 );
 
--- INSERIR OS VALORES DA EMPRESA 
-
-INSERT INTO EMPRESA VALUES
-('12345678912345', 'Transporte Hospitalar', 'requisição de novos sensores' );
-
 
 CREATE TABLE USUARIO (
 idUsuario INT PRIMARY KEY AUTO_INCREMENT,

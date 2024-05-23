@@ -1,10 +1,10 @@
 let temp = []
 let umidade = []
 
-for (let i = 1; i <= 6; i++) {  
-  temp.push(Math.round(Math.random() * 8));
-  umidade.push(Math.round(Math.random() * (75 - 65) + 65));
-}
+// for (let i = 1; i <= 6; i++) {  
+//   temp.push(Math.round(Math.random() * 8));
+//   umidade.push(Math.round(Math.random() * (75 - 65) + 65));
+// }
 
 console.log(temp, umidade);
 

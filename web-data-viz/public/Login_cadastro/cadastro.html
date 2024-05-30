@@ -9,70 +9,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    
+
     <title>Cadastro</title>
 </head>
 
-<body id="cadastro">
+<body>
     <div class="container">
-        <div class="form">
-            <div class="title">
-                <h1>Cadastre-se</h1>
+        <img class="logo-img" src="./assets/imgs/Logo corinthians  preto e branco.png" alt="">
+        <div class="signin-signup">
+            <div action="" class="sign-in-form">
+                <h2 class="title">Bem-vindo!</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="E-mail" id="input_email_login">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Senha" id="input_senha_login">
+                </div>
+                <button class="btn" value="login" type="submit" onclick="entrar()">Login</button>
+                <a href="./index.html"><img class="logo-casa" src="./assets/icon/home.png" alt="logo-home"></a>
+
+                <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
             </div>
-            
-            <span class="error-message disabled"></span>
-            
-            <div class="form-box">
-                <div class="input-group">
-                    <div class="input-box">
-                        <label for="company">Empresa</label>
-                        <input id="company" type="text" name="company" placeholder="Nome da empresa" autocomplete="off">
-                    </div>
-
-                    <div class="input-box">
-                        <label for="representative">Representante</label>
-                        <input id="representative" type="text" name="representative"
-                            placeholder="Representante da empresa"
-                            autocomplete="off">
-                    </div>
-
-                    <div class="input-box">
-                        <label for="email">E-mail</label>
-                        <input id="cadastro_email" type="email" name="email" placeholder="Digite o seu email" autocomplete="off">
-                    </div>
-
+            <div action="" class="sign-up-form">
+                <h2 class="title">Cadastro</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="input_empresa_cadastro" placeholder="Empresa">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="input_representante_cadastro" placeholder="Representante">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="input_cnpj_cadastro" placeholder="CNPJ">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="input_celular_cadastro" placeholder="Celular">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="input_email_cadastro" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="input_senha_cadastro" placeholder="Senha">
                 </div>
 
-                <div class="input-group">
-                    <div class="input-box">
-                        <label for="number">Celular</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxxx-xxxx" autocomplete="off">
-                    </div>
+                <button class="btn" type="submit" value="Sign up" onclick="cadastrar()">Cadastre-se</button>
+                <a href="./index.html"><img class="logo-casa" src="./assets/icon/home.png" alt="logo-home"></a>
 
-                    <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input id="cadastro_password" type="password" name="password" placeholder="Digite a sua senha" autocomplete="off">
-                    </div>
-
-                    <div class="input-box">
-                        <label for="cnpj">CNPJ</label>
-                        <input id="cnpj" type="text" name="cnpj"
-                            placeholder="Digite seu CNPJ"
-                            autocomplete="off">
-                    </div>
-                </div>
-            </div>
-
-            <div class="buttons">
-                <a class="btn-primary" onclick="validation()">Criar conta</a>
-    
-                <a href="./login.html" class="external-link">Já tenho uma conta</a>
+                <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Fazer Cadastro</a></p>
             </div>
         </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Ja tem cadastro?</h3>
+                    <p>Vá para a tela de Login</p>
+                    <button class="btn" id="sign-in-btn">Login</button>
+                </div>
+
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Vaccin Therm está aqui para te ajudar!</h3>
+                    <p>Ainda não tem seu cadastro?</p>
+                    <button class="btn" id="sign-up-btn">Cadastre-se</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
 
 <script>
+
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container");
+    const sign_in_btn2 = document.querySelector("#sign-in-btn2");
+    const sign_up_btn2 = document.querySelector("#sign-up-btn2");
+    sign_up_btn.addEventListener("click", () => {
+        container.classList.add("sign-up-mode");
+    });
+    sign_in_btn.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode");
+    });
+    sign_up_btn2.addEventListener("click", () => {
+        container.classList.add("sign-up-mode2");
+    });
+    sign_in_btn2.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode2");
+    });
+
+
+
+
     function validation() {
         let empresa = document.getElementById('company');
         let representante = document.getElementById('representative');
@@ -93,83 +132,83 @@
         cadastroSenha.classList.remove('error-input');
         cnpj.classList.remove('error-input');
 
-        if(empresa.value != '' && representante.value != '' &&
+        if (empresa.value != '' && representante.value != '' &&
             cadastroEmail.value != '' && celNum.value != '' &&
             cadastroSenha.value != '' && cnpj.value != '') {
-                // Verificando se o campo de email possui arroba
-                if (cadastroEmail.value.indexOf('@') > -1) {
-                    if (!isNaN(celNum.value)) {
-                        if(cadastroSenha.value.length > 5) {
-                            if(!isNaN(cnpj.value)) {
-                                alert('Cadastrado com sucesso');
-                            } else {
-                                spanErro.classList.remove('disabled');
-                                spanErro.innerHTML = 'CNPJ inválido';
-                                cnpj.classList.add('error-input');
-                            }
+            // Verificando se o campo de email possui arroba
+            if (cadastroEmail.value.indexOf('@') > -1) {
+                if (!isNaN(celNum.value)) {
+                    if (cadastroSenha.value.length > 5) {
+                        if (!isNaN(cnpj.value)) {
+                            alert('Cadastrado com sucesso');
                         } else {
                             spanErro.classList.remove('disabled');
-                            spanErro.innerHTML = 'A senha deve conter no mínino 6 caracteres';
-                            cadastroSenha.classList.add('error-input');
+                            spanErro.innerHTML = 'CNPJ inválido';
+                            cnpj.classList.add('error-input');
                         }
                     } else {
                         spanErro.classList.remove('disabled');
-                        spanErro.innerHTML = 'Número inválido inválido';
-                        celNum.classList.add('error-input');
+                        spanErro.innerHTML = 'A senha deve conter no mínino 6 caracteres';
+                        cadastroSenha.classList.add('error-input');
                     }
                 } else {
                     spanErro.classList.remove('disabled');
-                    spanErro.innerHTML = 'Email inválido';
-                    cadastroEmail.classList.add('error-input');
+                    spanErro.innerHTML = 'Número inválido inválido';
+                    celNum.classList.add('error-input');
                 }
             } else {
                 spanErro.classList.remove('disabled');
-                spanErro.innerHTML = 'Preencha todos os campos';
-                empresa.classList.add('error-input');
-                representante.classList.add('error-input');
+                spanErro.innerHTML = 'Email inválido';
                 cadastroEmail.classList.add('error-input');
-                celNum.classList.add('error-input');
-                cadastroSenha.classList.add('error-input');
-                cnpj.classList.add('error-input');
             }
-
-
-             // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        empresaServer: empresa.value,
-        celularServer: celNum.value,
-        representanteServer: representante.value,
-        senhaServer: cadastroSenha.value,
-        emailServer: cadastroEmail.value,
-        cnpjServer: cnpj.value
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-
-        //   div_mensagem.classList.remove("disabled");
-        //   div_mensagem.classList.add("erro");
-        //   div_mensagem.innerHTML = `<p style='text-align: center; color: #5f4336'>Cadastro realizado com sucesso!</p>`;
-
-          setTimeout(() => {
-            location.reload()
-          }, "2000");
-
         } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
+            spanErro.classList.remove('disabled');
+            spanErro.innerHTML = 'Preencha todos os campos';
+            empresa.classList.add('error-input');
+            representante.classList.add('error-input');
+            cadastroEmail.classList.add('error-input');
+            celNum.classList.add('error-input');
+            cadastroSenha.classList.add('error-input');
+            cnpj.classList.add('error-input');
         }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
+
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                empresaServer: empresa.value,
+                celularServer: celNum.value,
+                representanteServer: representante.value,
+                senhaServer: cadastroSenha.value,
+                emailServer: cadastroEmail.value,
+                cnpjServer: cnpj.value
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+
+                    //   div_mensagem.classList.remove("disabled");
+                    //   div_mensagem.classList.add("erro");
+                    //   div_mensagem.innerHTML = `<p style='text-align: center; color: #5f4336'>Cadastro realizado com sucesso!</p>`;
+
+                    setTimeout(() => {
+                        location.reload()
+                    }, "2000");
+
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
     }
 </script>
